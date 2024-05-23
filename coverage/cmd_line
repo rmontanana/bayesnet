@@ -1,0 +1,1 @@
+genhtml build_Debug/tests/coverage.info --demangle-cpp --output-directory docs/manual/coverage --title 'BayesNet Coverage Report' -s -k -f --legend

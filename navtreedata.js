@@ -25,6 +25,7 @@
 var NAVTREE =
 [
   [ "BayesNet", "index.html", [
+    [ "<img src=\"logo.png\" alt=\"logo\" width=\"50\"/>  BayesNet", "index.html", "index" ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],

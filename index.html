@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.11.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>BayesNet: Main Page</title>
+<title>BayesNet: &lt;img src=&quot;logo.png&quot; alt=&quot;logo&quot; width=&quot;50&quot;/&gt;  BayesNet</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -97,10 +97,81 @@ $(function(){initNavTree('index.html',''); initResizable(true); });
 </div>
 </div>
 
-<div class="header">
-  <div class="headertitle"><div class="title">BayesNet Documentation</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title"><img src="logo.png" alt="logo" width="50" class="inline"/> BayesNet </div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><p><a class="anchor" id="md__2_users_2rmontanana_2_code_2_bayes_net_2_r_e_a_d_m_e"></a> <img src="https://img.shields.io/badge/c++-%2300599C.svg?style=flat&amp;logo=c%2B%2B&amp;logoColor=white" alt="C++" style="pointer-events: none;" class="inline"/> <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT" style="pointer-events: none;" class="inline"/></a> <img src="https://img.shields.io/gitea/v/release/rmontanana/bayesnet?gitea_url=https://gitea.rmontanana.es:3000" alt="Gitea Release" class="inline"/> <a href="https://app.codacy.com/gh/Doctorado-ML/BayesNet/dashboard?utm_source=gh&amp;utm_medium=referral&amp;utm_content=&amp;utm_campaign=Badge_grade"><img src="https://app.codacy.com/project/badge/Grade/cf3e0ac71d764650b1bf4d8d00d303b1" alt="Codacy Badge" class="inline"/></a> <a href="https://sonarcloud.io/summary/new_code?id=rmontanana_BayesNet"><img src="https://sonarcloud.io/api/project_badges/measure?project=rmontanana_BayesNet&amp;metric=security_rating" alt="Security Rating" class="inline"/></a> <a href="https://sonarcloud.io/summary/new_code?id=rmontanana_BayesNet"><img src="https://sonarcloud.io/api/project_badges/measure?project=rmontanana_BayesNet&amp;metric=reliability_rating" alt="Reliability Rating" class="inline"/></a> <img src="https://img.shields.io/gitea/last-commit/rmontanana/bayesnet?gitea_url=https://gitea.rmontanana.es:3000&amp;logo=gitea" alt="Gitea Last Commit" class="inline"/> <a href="html/index.html"><img src="https://img.shields.io/badge/Coverage-97,3%25-green" alt="Coverage Badge" class="inline"/></a></p>
+<p>Bayesian Network Classifiers using libtorch from scratch</p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Dependencies</h1>
+<p>The only external dependency is <a href="https://pytorch.org/cppdocs/installing.html">libtorch</a> which can be installed with the following commands:</p>
+<div class="fragment"><div class="line">wget https://download.pytorch.org/libtorch/nightly/cpu/libtorch-shared-with-deps-latest.zip</div>
+<div class="line">unzip libtorch-shared-with-deps-latest.zips</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md2"></a>
+Setup</h1>
+<h2><a class="anchor" id="autotoc_md3"></a>
+Getting the code</h2>
+<div class="fragment"><div class="line">git clone --recurse-submodules https://github.com/doctorado-ml/bayesnet</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md4"></a>
+Release</h2>
+<div class="fragment"><div class="line">make release</div>
+<div class="line">make buildr</div>
+<div class="line">sudo make install</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md5"></a>
+Debug &amp; Tests</h2>
+<div class="fragment"><div class="line">make debug</div>
+<div class="line">make test</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md6"></a>
+Coverage</h2>
+<div class="fragment"><div class="line">make coverage</div>
+<div class="line">make viewcoverage</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md7"></a>
+Sample app</h2>
+<p>After building and installing the release version, you can run the sample app with the following commands:</p>
+<div class="fragment"><div class="line">make sample</div>
+<div class="line">make sample fname=tests/data/glass.arff</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md8"></a>
+Models</h1>
+<h3><a class="anchor" id="autotoc_md9"></a>
+- TAN</h3>
+<h3><a class="anchor" id="autotoc_md10"></a>
+- KDB</h3>
+<h3><a class="anchor" id="autotoc_md11"></a>
+- SPODE</h3>
+<h3><a class="anchor" id="autotoc_md12"></a>
+- SPnDE</h3>
+<h3><a class="anchor" id="autotoc_md13"></a>
+- AODE</h3>
+<h3><a class="anchor" id="autotoc_md14"></a>
+- BoostAODE</h3>
+<h3><a class="anchor" id="autotoc_md15"></a>
+- BoostA2DE</h3>
+<h2><a class="anchor" id="autotoc_md16"></a>
+With Local Discretization</h2>
+<h3><a class="anchor" id="autotoc_md17"></a>
+- TANLd</h3>
+<h3><a class="anchor" id="autotoc_md18"></a>
+- KDBLd</h3>
+<h3><a class="anchor" id="autotoc_md19"></a>
+- SPODELd</h3>
+<h3><a class="anchor" id="autotoc_md20"></a>
+- AODELd</h3>
+<h1><a class="anchor" id="autotoc_md21"></a>
+Documentation</h1>
+<h2><a class="anchor" id="autotoc_md22"></a>
+<a href="https://rmontanana.github.io/bayesnet/">Manual</a></h2>
+<h2><a class="anchor" id="autotoc_md23"></a>
+<a href="https://rmontanana.github.io/bayesnet/coverage/index.html">Coverage report</a></h2>
+<h1><a class="anchor" id="autotoc_md24"></a>
+Diagrams</h1>
+<h2><a class="anchor" id="autotoc_md25"></a>
+UML Class Diagram</h2>
+<p><img src="diagrams/BayesNet.svg" alt="BayesNet UML Class Diagram" style="pointer-events: none;" class="inline"/></p>
+<h2><a class="anchor" id="autotoc_md26"></a>
+Dependency Diagram</h2>
+<p><img src="diagrams/dependency.svg" alt="BayesNet Dependency Diagram" style="pointer-events: none;" class="inline"/> </p>
+</div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"/>
 </div><!-- contents -->
 </div><!-- doc-content -->
