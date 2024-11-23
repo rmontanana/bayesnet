@@ -19,7 +19,7 @@
                 <table cellpadding=1 border=0 width="100%">
           <tr>
             <td width="10%" class="headerItem">Current view:</td>
-            <td width="10%" class="headerValue"><a href="../../index.html" target="_parent" title="Click to go to top-level">top level</a> - <a href="index.html" target="_parent" title="Click to go to directory bayesnet/utils">bayesnet/utils</a> - Mst.h<span style="font-size: 80%;"> (source / <a href="Mst.h.func-c.html" title="Click to go to function table">functions</a>)</span></td>
+            <td width="10%" class="headerValue"><a href="../../index.html" target="_parent">top level</a> - <a href="index.html" target="_parent">bayesnet/utils</a> - Mst.h<span style="font-size: 80%;"> (source / <a href="Mst.h.func-c.html">functions</a>)</span></td>
             <td width="5%"></td>
             <td width="5%"></td>
             <td width="5%" class="headerCovTableHead">Coverage</td>
@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-05-23 18:53:27</td>
+            <td class="headerValue">2024-11-23 18:53:13</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -84,28 +84,30 @@
 <span id="L14"><span class="lineNum">      14</span>              :     public:</span>
 <span id="L15"><span class="lineNum">      15</span>              :         MST() = default;</span>
 <span id="L16"><span class="lineNum">      16</span>              :         MST(const std::vector&lt;std::string&gt;&amp; features, const torch::Tensor&amp; weights, const int root);</span>
-<span id="L17"><span class="lineNum">      17</span>              :         std::vector&lt;std::pair&lt;int, int&gt;&gt; maximumSpanningTree();</span>
-<span id="L18"><span class="lineNum">      18</span>              :     private:</span>
-<span id="L19"><span class="lineNum">      19</span>              :         torch::Tensor weights;</span>
-<span id="L20"><span class="lineNum">      20</span>              :         std::vector&lt;std::string&gt; features;</span>
-<span id="L21"><span class="lineNum">      21</span>              :         int root = 0;</span>
-<span id="L22"><span class="lineNum">      22</span>              :     };</span>
-<span id="L23"><span class="lineNum">      23</span>              :     class Graph {</span>
-<span id="L24"><span class="lineNum">      24</span>              :     public:</span>
-<span id="L25"><span class="lineNum">      25</span>              :         explicit Graph(int V);</span>
-<span id="L26"><span class="lineNum">      26</span>              :         void addEdge(int u, int v, float wt);</span>
-<span id="L27"><span class="lineNum">      27</span>              :         int find_set(int i);</span>
-<span id="L28"><span class="lineNum">      28</span>              :         void union_set(int u, int v);</span>
-<span id="L29"><span class="lineNum">      29</span>              :         void kruskal_algorithm();</span>
-<span id="L30"><span class="lineNum">      30</span> <span class="tlaGNC tlaBgGNC">          29 :         std::vector &lt;std::pair&lt;float, std::pair&lt;int, int&gt;&gt;&gt; get_mst() { return T; }</span></span>
-<span id="L31"><span class="lineNum">      31</span>              :     private:</span>
-<span id="L32"><span class="lineNum">      32</span>              :         int V;      // number of nodes in graph</span>
-<span id="L33"><span class="lineNum">      33</span>              :         std::vector &lt;std::pair&lt;float, std::pair&lt;int, int&gt;&gt;&gt; G; // std::vector for graph</span>
-<span id="L34"><span class="lineNum">      34</span>              :         std::vector &lt;std::pair&lt;float, std::pair&lt;int, int&gt;&gt;&gt; T; // std::vector for mst</span>
-<span id="L35"><span class="lineNum">      35</span>              :         std::vector&lt;int&gt; parent;</span>
-<span id="L36"><span class="lineNum">      36</span>              :     };</span>
-<span id="L37"><span class="lineNum">      37</span>              : }</span>
-<span id="L38"><span class="lineNum">      38</span>              : #endif</span>
+<span id="L17"><span class="lineNum">      17</span>              :         void insertElement(std::list&lt;int&gt;&amp; variables, int variable);</span>
+<span id="L18"><span class="lineNum">      18</span>              :         std::vector&lt;std::pair&lt;int, int&gt;&gt; reorder(std::vector&lt;std::pair&lt;float, std::pair&lt;int, int&gt;&gt;&gt; T, int root_original);</span>
+<span id="L19"><span class="lineNum">      19</span>              :         std::vector&lt;std::pair&lt;int, int&gt;&gt; maximumSpanningTree();</span>
+<span id="L20"><span class="lineNum">      20</span>              :     private:</span>
+<span id="L21"><span class="lineNum">      21</span>              :         torch::Tensor weights;</span>
+<span id="L22"><span class="lineNum">      22</span>              :         std::vector&lt;std::string&gt; features;</span>
+<span id="L23"><span class="lineNum">      23</span>              :         int root = 0;</span>
+<span id="L24"><span class="lineNum">      24</span>              :     };</span>
+<span id="L25"><span class="lineNum">      25</span>              :     class Graph {</span>
+<span id="L26"><span class="lineNum">      26</span>              :     public:</span>
+<span id="L27"><span class="lineNum">      27</span>              :         explicit Graph(int V);</span>
+<span id="L28"><span class="lineNum">      28</span>              :         void addEdge(int u, int v, float wt);</span>
+<span id="L29"><span class="lineNum">      29</span>              :         int find_set(int i);</span>
+<span id="L30"><span class="lineNum">      30</span>              :         void union_set(int u, int v);</span>
+<span id="L31"><span class="lineNum">      31</span>              :         void kruskal_algorithm();</span>
+<span id="L32"><span class="lineNum">      32</span> <span class="tlaGNC tlaBgGNC">          60 :         std::vector &lt;std::pair&lt;float, std::pair&lt;int, int&gt;&gt;&gt; get_mst() { return T; }</span></span>
+<span id="L33"><span class="lineNum">      33</span>              :     private:</span>
+<span id="L34"><span class="lineNum">      34</span>              :         int V;      // number of nodes in graph</span>
+<span id="L35"><span class="lineNum">      35</span>              :         std::vector &lt;std::pair&lt;float, std::pair&lt;int, int&gt;&gt;&gt; G; // std::vector for graph</span>
+<span id="L36"><span class="lineNum">      36</span>              :         std::vector &lt;std::pair&lt;float, std::pair&lt;int, int&gt;&gt;&gt; T; // std::vector for mst</span>
+<span id="L37"><span class="lineNum">      37</span>              :         std::vector&lt;int&gt; parent;</span>
+<span id="L38"><span class="lineNum">      38</span>              :     };</span>
+<span id="L39"><span class="lineNum">      39</span>              : }</span>
+<span id="L40"><span class="lineNum">      40</span>              : #endif</span>
         </pre>
               </td>
             </tr>
@@ -114,7 +116,7 @@
 
           <table width="100%" border=0 cellspacing=0 cellpadding=0>
             <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
-            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.1-1</a></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.0-1</a></td></tr>
           </table>
           <br>
 

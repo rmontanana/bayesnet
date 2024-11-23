@@ -1,34 +1,34 @@
 var hierarchy =
 [
-    [ "bayesnet::BaseClassifier", "classbayesnet_1_1_base_classifier.html", [
-      [ "bayesnet::Classifier", "classbayesnet_1_1_classifier.html", [
-        [ "bayesnet::Ensemble", "classbayesnet_1_1_ensemble.html", [
-          [ "bayesnet::A2DE", "classbayesnet_1_1_a2_d_e.html", null ],
-          [ "bayesnet::AODE", "classbayesnet_1_1_a_o_d_e.html", null ],
-          [ "bayesnet::AODELd", "classbayesnet_1_1_a_o_d_e_ld.html", null ],
-          [ "bayesnet::Boost", "classbayesnet_1_1_boost.html", [
-            [ "bayesnet::BoostA2DE", "classbayesnet_1_1_boost_a2_d_e.html", null ],
-            [ "bayesnet::BoostAODE", "classbayesnet_1_1_boost_a_o_d_e.html", null ]
+    [ "bayesnet::BaseClassifier", "classbayesnet_1_1BaseClassifier.html", [
+      [ "bayesnet::Classifier", "classbayesnet_1_1Classifier.html", [
+        [ "bayesnet::Ensemble", "classbayesnet_1_1Ensemble.html", [
+          [ "bayesnet::A2DE", "classbayesnet_1_1A2DE.html", null ],
+          [ "bayesnet::AODE", "classbayesnet_1_1AODE.html", null ],
+          [ "bayesnet::AODELd", "classbayesnet_1_1AODELd.html", null ],
+          [ "bayesnet::Boost", "classbayesnet_1_1Boost.html", [
+            [ "bayesnet::BoostA2DE", "classbayesnet_1_1BoostA2DE.html", null ],
+            [ "bayesnet::BoostAODE", "classbayesnet_1_1BoostAODE.html", null ]
           ] ]
         ] ],
-        [ "bayesnet::KDB", "classbayesnet_1_1_k_d_b.html", [
-          [ "bayesnet::KDBLd", "classbayesnet_1_1_k_d_b_ld.html", null ]
+        [ "bayesnet::KDB", "classbayesnet_1_1KDB.html", [
+          [ "bayesnet::KDBLd", "classbayesnet_1_1KDBLd.html", null ]
         ] ],
-        [ "bayesnet::SPODE", "classbayesnet_1_1_s_p_o_d_e.html", [
-          [ "bayesnet::SPODELd", "classbayesnet_1_1_s_p_o_d_e_ld.html", null ]
+        [ "bayesnet::SPODE", "classbayesnet_1_1SPODE.html", [
+          [ "bayesnet::SPODELd", "classbayesnet_1_1SPODELd.html", null ]
         ] ],
-        [ "bayesnet::SPnDE", "classbayesnet_1_1_s_pn_d_e.html", null ],
-        [ "bayesnet::TAN", "classbayesnet_1_1_t_a_n.html", [
-          [ "bayesnet::TANLd", "classbayesnet_1_1_t_a_n_ld.html", null ]
+        [ "bayesnet::SPnDE", "classbayesnet_1_1SPnDE.html", null ],
+        [ "bayesnet::TAN", "classbayesnet_1_1TAN.html", [
+          [ "bayesnet::TANLd", "classbayesnet_1_1TANLd.html", null ]
         ] ]
       ] ]
     ] ],
-    [ "bayesnet::Network", "classbayesnet_1_1_network.html", null ],
-    [ "bayesnet::Node", "classbayesnet_1_1_node.html", null ],
-    [ "bayesnet::Proposal", "classbayesnet_1_1_proposal.html", [
-      [ "bayesnet::AODELd", "classbayesnet_1_1_a_o_d_e_ld.html", null ],
-      [ "bayesnet::KDBLd", "classbayesnet_1_1_k_d_b_ld.html", null ],
-      [ "bayesnet::SPODELd", "classbayesnet_1_1_s_p_o_d_e_ld.html", null ],
-      [ "bayesnet::TANLd", "classbayesnet_1_1_t_a_n_ld.html", null ]
+    [ "bayesnet::Network", "classbayesnet_1_1Network.html", null ],
+    [ "bayesnet::Node", "classbayesnet_1_1Node.html", null ],
+    [ "bayesnet::Proposal", "classbayesnet_1_1Proposal.html", [
+      [ "bayesnet::AODELd", "classbayesnet_1_1AODELd.html", null ],
+      [ "bayesnet::KDBLd", "classbayesnet_1_1KDBLd.html", null ],
+      [ "bayesnet::SPODELd", "classbayesnet_1_1SPODELd.html", null ],
+      [ "bayesnet::TANLd", "classbayesnet_1_1TANLd.html", null ]
     ] ]
 ];

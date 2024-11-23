@@ -19,7 +19,7 @@
                 <table cellpadding=1 border=0 width="100%">
           <tr>
             <td width="10%" class="headerItem">Current view:</td>
-            <td width="10%" class="headerValue"><a href="../../index.html" target="_parent" title="Click to go to top-level">top level</a> - <a href="index.html" target="_parent" title="Click to go to directory bayesnet/utils">bayesnet/utils</a> - BayesMetrics.cc<span style="font-size: 80%;"> (source / <a href="BayesMetrics.cc.func-c.html" title="Click to go to function table">functions</a>)</span></td>
+            <td width="10%" class="headerValue"><a href="../../index.html" target="_parent">top level</a> - <a href="index.html" target="_parent">bayesnet/utils</a> - BayesMetrics.cc<span style="font-size: 80%;"> (source / <a href="BayesMetrics.cc.func-c.html">functions</a>)</span></td>
             <td width="5%"></td>
             <td width="5%"></td>
             <td width="5%" class="headerCovTableHead">Coverage</td>
@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-05-23 18:53:27</td>
+            <td class="headerValue">2024-11-23 18:53:13</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -81,252 +81,252 @@
 <span id="L11"><span class="lineNum">      11</span>              : #include &quot;BayesMetrics.h&quot;</span>
 <span id="L12"><span class="lineNum">      12</span>              : namespace bayesnet {</span>
 <span id="L13"><span class="lineNum">      13</span>              :     //samples is n+1xm tensor used to fit the model</span>
-<span id="L14"><span class="lineNum">      14</span> <span class="tlaGNC tlaBgGNC">         557 :     Metrics::Metrics(const torch::Tensor&amp; samples, const std::vector&lt;std::string&gt;&amp; features, const std::string&amp; className, const int classNumStates)</span></span>
-<span id="L15"><span class="lineNum">      15</span> <span class="tlaGNC">         557 :         : samples(samples)</span></span>
-<span id="L16"><span class="lineNum">      16</span> <span class="tlaGNC">         557 :         , className(className)</span></span>
-<span id="L17"><span class="lineNum">      17</span> <span class="tlaGNC">         557 :         , features(features)</span></span>
-<span id="L18"><span class="lineNum">      18</span> <span class="tlaGNC">         557 :         , classNumStates(classNumStates)</span></span>
+<span id="L14"><span class="lineNum">      14</span> <span class="tlaGNC tlaBgGNC">        1584 :     Metrics::Metrics(const torch::Tensor&amp; samples, const std::vector&lt;std::string&gt;&amp; features, const std::string&amp; className, const int classNumStates)</span></span>
+<span id="L15"><span class="lineNum">      15</span> <span class="tlaGNC">        1584 :         : samples(samples)</span></span>
+<span id="L16"><span class="lineNum">      16</span> <span class="tlaGNC">        1584 :         , className(className)</span></span>
+<span id="L17"><span class="lineNum">      17</span> <span class="tlaGNC">        1584 :         , features(features)</span></span>
+<span id="L18"><span class="lineNum">      18</span> <span class="tlaGNC">        1584 :         , classNumStates(classNumStates)</span></span>
 <span id="L19"><span class="lineNum">      19</span>              :     {</span>
-<span id="L20"><span class="lineNum">      20</span> <span class="tlaGNC">         557 :     }</span></span>
+<span id="L20"><span class="lineNum">      20</span> <span class="tlaGNC">        1584 :     }</span></span>
 <span id="L21"><span class="lineNum">      21</span>              :     //samples is n+1xm std::vector used to fit the model</span>
-<span id="L22"><span class="lineNum">      22</span> <span class="tlaGNC">          16 :     Metrics::Metrics(const std::vector&lt;std::vector&lt;int&gt;&gt;&amp; vsamples, const std::vector&lt;int&gt;&amp; labels, const std::vector&lt;std::string&gt;&amp; features, const std::string&amp; className, const int classNumStates)</span></span>
-<span id="L23"><span class="lineNum">      23</span> <span class="tlaGNC">          16 :         : samples(torch::zeros({ static_cast&lt;int&gt;(vsamples.size() + 1), static_cast&lt;int&gt;(vsamples[0].size()) }, torch::kInt32))</span></span>
-<span id="L24"><span class="lineNum">      24</span> <span class="tlaGNC">          16 :         , className(className)</span></span>
-<span id="L25"><span class="lineNum">      25</span> <span class="tlaGNC">          16 :         , features(features)</span></span>
-<span id="L26"><span class="lineNum">      26</span> <span class="tlaGNC">          16 :         , classNumStates(classNumStates)</span></span>
+<span id="L22"><span class="lineNum">      22</span> <span class="tlaGNC">          32 :     Metrics::Metrics(const std::vector&lt;std::vector&lt;int&gt;&gt;&amp; vsamples, const std::vector&lt;int&gt;&amp; labels, const std::vector&lt;std::string&gt;&amp; features, const std::string&amp; className, const int classNumStates)</span></span>
+<span id="L23"><span class="lineNum">      23</span> <span class="tlaGNC">          32 :         : samples(torch::zeros({ static_cast&lt;int&gt;(vsamples.size() + 1), static_cast&lt;int&gt;(vsamples[0].size()) }, torch::kInt32))</span></span>
+<span id="L24"><span class="lineNum">      24</span> <span class="tlaGNC">          32 :         , className(className)</span></span>
+<span id="L25"><span class="lineNum">      25</span> <span class="tlaGNC">          32 :         , features(features)</span></span>
+<span id="L26"><span class="lineNum">      26</span> <span class="tlaGNC">          32 :         , classNumStates(classNumStates)</span></span>
 <span id="L27"><span class="lineNum">      27</span>              :     {</span>
-<span id="L28"><span class="lineNum">      28</span> <span class="tlaGNC">         128 :         for (int i = 0; i &lt; vsamples.size(); ++i) {</span></span>
-<span id="L29"><span class="lineNum">      29</span> <span class="tlaGNC">         336 :             samples.index_put_({ i,  &quot;...&quot; }, torch::tensor(vsamples[i], torch::kInt32));</span></span>
+<span id="L28"><span class="lineNum">      28</span> <span class="tlaGNC">         256 :         for (int i = 0; i &lt; vsamples.size(); ++i) {</span></span>
+<span id="L29"><span class="lineNum">      29</span> <span class="tlaGNC">         896 :             samples.index_put_({ i,  &quot;...&quot; }, torch::tensor(vsamples[i], torch::kInt32));</span></span>
 <span id="L30"><span class="lineNum">      30</span>              :         }</span>
-<span id="L31"><span class="lineNum">      31</span> <span class="tlaGNC">          48 :         samples.index_put_({ -1, &quot;...&quot; }, torch::tensor(labels, torch::kInt32));</span></span>
-<span id="L32"><span class="lineNum">      32</span> <span class="tlaGNC">         144 :     }</span></span>
-<span id="L33"><span class="lineNum">      33</span> <span class="tlaGNC">          27 :     std::vector&lt;std::pair&lt;int, int&gt;&gt; Metrics::SelectKPairs(const torch::Tensor&amp; weights, std::vector&lt;int&gt;&amp; featuresExcluded, bool ascending, unsigned k)</span></span>
+<span id="L31"><span class="lineNum">      31</span> <span class="tlaGNC">         128 :         samples.index_put_({ -1, &quot;...&quot; }, torch::tensor(labels, torch::kInt32));</span></span>
+<span id="L32"><span class="lineNum">      32</span> <span class="tlaGNC">         288 :     }</span></span>
+<span id="L33"><span class="lineNum">      33</span> <span class="tlaGNC">         238 :     std::vector&lt;std::pair&lt;int, int&gt;&gt; Metrics::SelectKPairs(const torch::Tensor&amp; weights, std::vector&lt;int&gt;&amp; featuresExcluded, bool ascending, unsigned k)</span></span>
 <span id="L34"><span class="lineNum">      34</span>              :     {</span>
 <span id="L35"><span class="lineNum">      35</span>              :         // Return the K Best features </span>
-<span id="L36"><span class="lineNum">      36</span> <span class="tlaGNC">          27 :         auto n = features.size();</span></span>
+<span id="L36"><span class="lineNum">      36</span> <span class="tlaGNC">         238 :         auto n = features.size();</span></span>
 <span id="L37"><span class="lineNum">      37</span>              :         // compute scores</span>
-<span id="L38"><span class="lineNum">      38</span> <span class="tlaGNC">          27 :         scoresKPairs.clear();</span></span>
-<span id="L39"><span class="lineNum">      39</span> <span class="tlaGNC">          27 :         pairsKBest.clear();</span></span>
-<span id="L40"><span class="lineNum">      40</span> <span class="tlaGNC">          81 :         auto labels = samples.index({ -1, &quot;...&quot; });</span></span>
-<span id="L41"><span class="lineNum">      41</span> <span class="tlaGNC">         196 :         for (int i = 0; i &lt; n - 1; ++i) {</span></span>
-<span id="L42"><span class="lineNum">      42</span> <span class="tlaGNC">         169 :             if (std::find(featuresExcluded.begin(), featuresExcluded.end(), i) != featuresExcluded.end()) {</span></span>
-<span id="L43"><span class="lineNum">      43</span> <span class="tlaGNC">           1 :                 continue;</span></span>
+<span id="L38"><span class="lineNum">      38</span> <span class="tlaGNC">         238 :         scoresKPairs.clear();</span></span>
+<span id="L39"><span class="lineNum">      39</span> <span class="tlaGNC">         238 :         pairsKBest.clear();</span></span>
+<span id="L40"><span class="lineNum">      40</span> <span class="tlaGNC">         714 :         auto labels = samples.index({ -1, &quot;...&quot; });</span></span>
+<span id="L41"><span class="lineNum">      41</span> <span class="tlaGNC">        2586 :         for (int i = 0; i &lt; n - 1; ++i) {</span></span>
+<span id="L42"><span class="lineNum">      42</span> <span class="tlaGNC">        2348 :             if (std::find(featuresExcluded.begin(), featuresExcluded.end(), i) != featuresExcluded.end()) {</span></span>
+<span id="L43"><span class="lineNum">      43</span> <span class="tlaGNC">         140 :                 continue;</span></span>
 <span id="L44"><span class="lineNum">      44</span>              :             }</span>
-<span id="L45"><span class="lineNum">      45</span> <span class="tlaGNC">         811 :             for (int j = i + 1; j &lt; n; ++j) {</span></span>
-<span id="L46"><span class="lineNum">      46</span> <span class="tlaGNC">         643 :                 if (std::find(featuresExcluded.begin(), featuresExcluded.end(), j) != featuresExcluded.end()) {</span></span>
-<span id="L47"><span class="lineNum">      47</span> <span class="tlaGNC">           2 :                     continue;</span></span>
+<span id="L45"><span class="lineNum">      45</span> <span class="tlaGNC">       26432 :             for (int j = i + 1; j &lt; n; ++j) {</span></span>
+<span id="L46"><span class="lineNum">      46</span> <span class="tlaGNC">       24224 :                 if (std::find(featuresExcluded.begin(), featuresExcluded.end(), j) != featuresExcluded.end()) {</span></span>
+<span id="L47"><span class="lineNum">      47</span> <span class="tlaGNC">         360 :                     continue;</span></span>
 <span id="L48"><span class="lineNum">      48</span>              :                 }</span>
-<span id="L49"><span class="lineNum">      49</span> <span class="tlaGNC">         641 :                 auto key = std::make_pair(i, j);</span></span>
-<span id="L50"><span class="lineNum">      50</span> <span class="tlaGNC">        3205 :                 auto value = conditionalMutualInformation(samples.index({ i, &quot;...&quot; }), samples.index({ j, &quot;...&quot; }), labels, weights);</span></span>
-<span id="L51"><span class="lineNum">      51</span> <span class="tlaGNC">         641 :                 scoresKPairs.push_back({ key, value });</span></span>
+<span id="L49"><span class="lineNum">      49</span> <span class="tlaGNC">       23864 :                 auto key = std::make_pair(i, j);</span></span>
+<span id="L50"><span class="lineNum">      50</span> <span class="tlaGNC">      119320 :                 auto value = conditionalMutualInformation(samples.index({ i, &quot;...&quot; }), samples.index({ j, &quot;...&quot; }), labels, weights);</span></span>
+<span id="L51"><span class="lineNum">      51</span> <span class="tlaGNC">       23864 :                 scoresKPairs.push_back({ key, value });</span></span>
 <span id="L52"><span class="lineNum">      52</span>              :             }</span>
 <span id="L53"><span class="lineNum">      53</span>              :         }</span>
 <span id="L54"><span class="lineNum">      54</span>              :         // sort scores</span>
-<span id="L55"><span class="lineNum">      55</span> <span class="tlaGNC">          27 :         if (ascending) {</span></span>
-<span id="L56"><span class="lineNum">      56</span> <span class="tlaGNC">           3 :             sort(scoresKPairs.begin(), scoresKPairs.end(), [](auto&amp; a, auto&amp; b)</span></span>
-<span id="L57"><span class="lineNum">      57</span> <span class="tlaGNC">          28 :                 { return a.second &lt; b.second; });</span></span>
+<span id="L55"><span class="lineNum">      55</span> <span class="tlaGNC">         238 :         if (ascending) {</span></span>
+<span id="L56"><span class="lineNum">      56</span> <span class="tlaGNC">          30 :             sort(scoresKPairs.begin(), scoresKPairs.end(), [](auto&amp; a, auto&amp; b)</span></span>
+<span id="L57"><span class="lineNum">      57</span> <span class="tlaGNC">        4348 :                 { return a.second &lt; b.second; });</span></span>
 <span id="L58"><span class="lineNum">      58</span>              : </span>
 <span id="L59"><span class="lineNum">      59</span>              :         } else {</span>
-<span id="L60"><span class="lineNum">      60</span> <span class="tlaGNC">          24 :             sort(scoresKPairs.begin(), scoresKPairs.end(), [](auto&amp; a, auto&amp; b)</span></span>
-<span id="L61"><span class="lineNum">      61</span> <span class="tlaGNC">        2955 :                 { return a.second &gt; b.second; });</span></span>
+<span id="L60"><span class="lineNum">      60</span> <span class="tlaGNC">         208 :             sort(scoresKPairs.begin(), scoresKPairs.end(), [](auto&amp; a, auto&amp; b)</span></span>
+<span id="L61"><span class="lineNum">      61</span> <span class="tlaGNC">      173260 :                 { return a.second &gt; b.second; });</span></span>
 <span id="L62"><span class="lineNum">      62</span>              :         }</span>
-<span id="L63"><span class="lineNum">      63</span> <span class="tlaGNC">         668 :         for (auto&amp; [pairs, score] : scoresKPairs) {</span></span>
-<span id="L64"><span class="lineNum">      64</span> <span class="tlaGNC">         641 :             pairsKBest.push_back(pairs);</span></span>
+<span id="L63"><span class="lineNum">      63</span> <span class="tlaGNC">       24102 :         for (auto&amp; [pairs, score] : scoresKPairs) {</span></span>
+<span id="L64"><span class="lineNum">      64</span> <span class="tlaGNC">       23864 :             pairsKBest.push_back(pairs);</span></span>
 <span id="L65"><span class="lineNum">      65</span>              :         }</span>
-<span id="L66"><span class="lineNum">      66</span> <span class="tlaGNC">          27 :         if (k != 0 &amp;&amp; k &lt; pairsKBest.size()) {</span></span>
-<span id="L67"><span class="lineNum">      67</span> <span class="tlaGNC">           2 :             if (ascending) {</span></span>
-<span id="L68"><span class="lineNum">      68</span> <span class="tlaGNC">           1 :                 int limit = pairsKBest.size() - k;</span></span>
-<span id="L69"><span class="lineNum">      69</span> <span class="tlaGNC">           4 :                 for (int i = 0; i &lt; limit; i++) {</span></span>
-<span id="L70"><span class="lineNum">      70</span> <span class="tlaGNC">           3 :                     pairsKBest.erase(pairsKBest.begin());</span></span>
-<span id="L71"><span class="lineNum">      71</span> <span class="tlaGNC">           3 :                     scoresKPairs.erase(scoresKPairs.begin());</span></span>
+<span id="L66"><span class="lineNum">      66</span> <span class="tlaGNC">         238 :         if (k != 0 &amp;&amp; k &lt; pairsKBest.size()) {</span></span>
+<span id="L67"><span class="lineNum">      67</span> <span class="tlaGNC">           4 :             if (ascending) {</span></span>
+<span id="L68"><span class="lineNum">      68</span> <span class="tlaGNC">           2 :                 int limit = pairsKBest.size() - k;</span></span>
+<span id="L69"><span class="lineNum">      69</span> <span class="tlaGNC">           8 :                 for (int i = 0; i &lt; limit; i++) {</span></span>
+<span id="L70"><span class="lineNum">      70</span> <span class="tlaGNC">           6 :                     pairsKBest.erase(pairsKBest.begin());</span></span>
+<span id="L71"><span class="lineNum">      71</span> <span class="tlaGNC">           6 :                     scoresKPairs.erase(scoresKPairs.begin());</span></span>
 <span id="L72"><span class="lineNum">      72</span>              :                 }</span>
 <span id="L73"><span class="lineNum">      73</span>              :             } else {</span>
-<span id="L74"><span class="lineNum">      74</span> <span class="tlaGNC">           1 :                 pairsKBest.resize(k);</span></span>
-<span id="L75"><span class="lineNum">      75</span> <span class="tlaGNC">           1 :                 scoresKPairs.resize(k);</span></span>
+<span id="L74"><span class="lineNum">      74</span> <span class="tlaGNC">           2 :                 pairsKBest.resize(k);</span></span>
+<span id="L75"><span class="lineNum">      75</span> <span class="tlaGNC">           2 :                 scoresKPairs.resize(k);</span></span>
 <span id="L76"><span class="lineNum">      76</span>              :             }</span>
 <span id="L77"><span class="lineNum">      77</span>              :         }</span>
-<span id="L78"><span class="lineNum">      78</span> <span class="tlaGNC">          54 :         return pairsKBest;</span></span>
-<span id="L79"><span class="lineNum">      79</span> <span class="tlaGNC">         695 :     }</span></span>
-<span id="L80"><span class="lineNum">      80</span> <span class="tlaGNC">         116 :     std::vector&lt;int&gt; Metrics::SelectKBestWeighted(const torch::Tensor&amp; weights, bool ascending, unsigned k)</span></span>
+<span id="L78"><span class="lineNum">      78</span> <span class="tlaGNC">         476 :         return pairsKBest;</span></span>
+<span id="L79"><span class="lineNum">      79</span> <span class="tlaGNC">       24340 :     }</span></span>
+<span id="L80"><span class="lineNum">      80</span> <span class="tlaGNC">         232 :     std::vector&lt;int&gt; Metrics::SelectKBestWeighted(const torch::Tensor&amp; weights, bool ascending, unsigned k)</span></span>
 <span id="L81"><span class="lineNum">      81</span>              :     {</span>
 <span id="L82"><span class="lineNum">      82</span>              :         // Return the K Best features </span>
-<span id="L83"><span class="lineNum">      83</span> <span class="tlaGNC">         116 :         auto n = features.size();</span></span>
-<span id="L84"><span class="lineNum">      84</span> <span class="tlaGNC">         116 :         if (k == 0) {</span></span>
-<span id="L85"><span class="lineNum">      85</span> <span class="tlaGNC">           1 :             k = n;</span></span>
+<span id="L83"><span class="lineNum">      83</span> <span class="tlaGNC">         232 :         auto n = features.size();</span></span>
+<span id="L84"><span class="lineNum">      84</span> <span class="tlaGNC">         232 :         if (k == 0) {</span></span>
+<span id="L85"><span class="lineNum">      85</span> <span class="tlaGNC">           2 :             k = n;</span></span>
 <span id="L86"><span class="lineNum">      86</span>              :         }</span>
 <span id="L87"><span class="lineNum">      87</span>              :         // compute scores</span>
-<span id="L88"><span class="lineNum">      88</span> <span class="tlaGNC">         116 :         scoresKBest.clear();</span></span>
-<span id="L89"><span class="lineNum">      89</span> <span class="tlaGNC">         116 :         featuresKBest.clear();</span></span>
-<span id="L90"><span class="lineNum">      90</span> <span class="tlaGNC">         348 :         auto label = samples.index({ -1, &quot;...&quot; });</span></span>
-<span id="L91"><span class="lineNum">      91</span> <span class="tlaGNC">        2606 :         for (int i = 0; i &lt; n; ++i) {</span></span>
-<span id="L92"><span class="lineNum">      92</span> <span class="tlaGNC">        7470 :             scoresKBest.push_back(mutualInformation(label, samples.index({ i, &quot;...&quot; }), weights));</span></span>
-<span id="L93"><span class="lineNum">      93</span> <span class="tlaGNC">        2490 :             featuresKBest.push_back(i);</span></span>
+<span id="L88"><span class="lineNum">      88</span> <span class="tlaGNC">         232 :         scoresKBest.clear();</span></span>
+<span id="L89"><span class="lineNum">      89</span> <span class="tlaGNC">         232 :         featuresKBest.clear();</span></span>
+<span id="L90"><span class="lineNum">      90</span> <span class="tlaGNC">         696 :         auto label = samples.index({ -1, &quot;...&quot; });</span></span>
+<span id="L91"><span class="lineNum">      91</span> <span class="tlaGNC">        5212 :         for (int i = 0; i &lt; n; ++i) {</span></span>
+<span id="L92"><span class="lineNum">      92</span> <span class="tlaGNC">       14940 :             scoresKBest.push_back(mutualInformation(label, samples.index({ i, &quot;...&quot; }), weights));</span></span>
+<span id="L93"><span class="lineNum">      93</span> <span class="tlaGNC">        4980 :             featuresKBest.push_back(i);</span></span>
 <span id="L94"><span class="lineNum">      94</span>              :         }</span>
 <span id="L95"><span class="lineNum">      95</span>              :         // sort &amp; reduce scores and features</span>
-<span id="L96"><span class="lineNum">      96</span> <span class="tlaGNC">         116 :         if (ascending) {</span></span>
-<span id="L97"><span class="lineNum">      97</span> <span class="tlaGNC">          20 :             sort(featuresKBest.begin(), featuresKBest.end(), [&amp;](int i, int j)</span></span>
-<span id="L98"><span class="lineNum">      98</span> <span class="tlaGNC">         453 :                 { return scoresKBest[i] &lt; scoresKBest[j]; });</span></span>
-<span id="L99"><span class="lineNum">      99</span> <span class="tlaGNC">          20 :             sort(scoresKBest.begin(), scoresKBest.end(), std::less&lt;double&gt;());</span></span>
-<span id="L100"><span class="lineNum">     100</span> <span class="tlaGNC">          20 :             if (k &lt; n) {</span></span>
-<span id="L101"><span class="lineNum">     101</span> <span class="tlaGNC">          28 :                 for (int i = 0; i &lt; n - k; ++i) {</span></span>
-<span id="L102"><span class="lineNum">     102</span> <span class="tlaGNC">          20 :                     featuresKBest.erase(featuresKBest.begin());</span></span>
-<span id="L103"><span class="lineNum">     103</span> <span class="tlaGNC">          20 :                     scoresKBest.erase(scoresKBest.begin());</span></span>
+<span id="L96"><span class="lineNum">      96</span> <span class="tlaGNC">         232 :         if (ascending) {</span></span>
+<span id="L97"><span class="lineNum">      97</span> <span class="tlaGNC">          40 :             sort(featuresKBest.begin(), featuresKBest.end(), [&amp;](int i, int j)</span></span>
+<span id="L98"><span class="lineNum">      98</span> <span class="tlaGNC">         906 :                 { return scoresKBest[i] &lt; scoresKBest[j]; });</span></span>
+<span id="L99"><span class="lineNum">      99</span> <span class="tlaGNC">          40 :             sort(scoresKBest.begin(), scoresKBest.end(), std::less&lt;double&gt;());</span></span>
+<span id="L100"><span class="lineNum">     100</span> <span class="tlaGNC">          40 :             if (k &lt; n) {</span></span>
+<span id="L101"><span class="lineNum">     101</span> <span class="tlaGNC">          56 :                 for (int i = 0; i &lt; n - k; ++i) {</span></span>
+<span id="L102"><span class="lineNum">     102</span> <span class="tlaGNC">          40 :                     featuresKBest.erase(featuresKBest.begin());</span></span>
+<span id="L103"><span class="lineNum">     103</span> <span class="tlaGNC">          40 :                     scoresKBest.erase(scoresKBest.begin());</span></span>
 <span id="L104"><span class="lineNum">     104</span>              :                 }</span>
 <span id="L105"><span class="lineNum">     105</span>              :             }</span>
 <span id="L106"><span class="lineNum">     106</span>              :         } else {</span>
-<span id="L107"><span class="lineNum">     107</span> <span class="tlaGNC">          96 :             sort(featuresKBest.begin(), featuresKBest.end(), [&amp;](int i, int j)</span></span>
-<span id="L108"><span class="lineNum">     108</span> <span class="tlaGNC">       16255 :                 { return scoresKBest[i] &gt; scoresKBest[j]; });</span></span>
-<span id="L109"><span class="lineNum">     109</span> <span class="tlaGNC">          96 :             sort(scoresKBest.begin(), scoresKBest.end(), std::greater&lt;double&gt;());</span></span>
-<span id="L110"><span class="lineNum">     110</span> <span class="tlaGNC">          96 :             featuresKBest.resize(k);</span></span>
-<span id="L111"><span class="lineNum">     111</span> <span class="tlaGNC">          96 :             scoresKBest.resize(k);</span></span>
+<span id="L107"><span class="lineNum">     107</span> <span class="tlaGNC">         192 :             sort(featuresKBest.begin(), featuresKBest.end(), [&amp;](int i, int j)</span></span>
+<span id="L108"><span class="lineNum">     108</span> <span class="tlaGNC">       32510 :                 { return scoresKBest[i] &gt; scoresKBest[j]; });</span></span>
+<span id="L109"><span class="lineNum">     109</span> <span class="tlaGNC">         192 :             sort(scoresKBest.begin(), scoresKBest.end(), std::greater&lt;double&gt;());</span></span>
+<span id="L110"><span class="lineNum">     110</span> <span class="tlaGNC">         192 :             featuresKBest.resize(k);</span></span>
+<span id="L111"><span class="lineNum">     111</span> <span class="tlaGNC">         192 :             scoresKBest.resize(k);</span></span>
 <span id="L112"><span class="lineNum">     112</span>              :         }</span>
-<span id="L113"><span class="lineNum">     113</span> <span class="tlaGNC">         232 :         return featuresKBest;</span></span>
-<span id="L114"><span class="lineNum">     114</span> <span class="tlaGNC">        2722 :     }</span></span>
-<span id="L115"><span class="lineNum">     115</span> <span class="tlaGNC">           8 :     std::vector&lt;double&gt; Metrics::getScoresKBest() const</span></span>
+<span id="L113"><span class="lineNum">     113</span> <span class="tlaGNC">         464 :         return featuresKBest;</span></span>
+<span id="L114"><span class="lineNum">     114</span> <span class="tlaGNC">        5444 :     }</span></span>
+<span id="L115"><span class="lineNum">     115</span> <span class="tlaGNC">          16 :     std::vector&lt;double&gt; Metrics::getScoresKBest() const</span></span>
 <span id="L116"><span class="lineNum">     116</span>              :     {</span>
-<span id="L117"><span class="lineNum">     117</span> <span class="tlaGNC">           8 :         return scoresKBest;</span></span>
+<span id="L117"><span class="lineNum">     117</span> <span class="tlaGNC">          16 :         return scoresKBest;</span></span>
 <span id="L118"><span class="lineNum">     118</span>              :     }</span>
-<span id="L119"><span class="lineNum">     119</span> <span class="tlaGNC">           5 :     std::vector&lt;std::pair&lt;std::pair&lt;int, int&gt;, double&gt;&gt; Metrics::getScoresKPairs() const</span></span>
+<span id="L119"><span class="lineNum">     119</span> <span class="tlaGNC">          10 :     std::vector&lt;std::pair&lt;std::pair&lt;int, int&gt;, double&gt;&gt; Metrics::getScoresKPairs() const</span></span>
 <span id="L120"><span class="lineNum">     120</span>              :     {</span>
-<span id="L121"><span class="lineNum">     121</span> <span class="tlaGNC">           5 :         return scoresKPairs;</span></span>
+<span id="L121"><span class="lineNum">     121</span> <span class="tlaGNC">          10 :         return scoresKPairs;</span></span>
 <span id="L122"><span class="lineNum">     122</span>              :     }</span>
-<span id="L123"><span class="lineNum">     123</span> <span class="tlaGNC">          34 :     torch::Tensor Metrics::conditionalEdge(const torch::Tensor&amp; weights)</span></span>
+<span id="L123"><span class="lineNum">     123</span> <span class="tlaGNC">          68 :     torch::Tensor Metrics::conditionalEdge(const torch::Tensor&amp; weights)</span></span>
 <span id="L124"><span class="lineNum">     124</span>              :     {</span>
-<span id="L125"><span class="lineNum">     125</span> <span class="tlaGNC">          34 :         auto result = std::vector&lt;double&gt;();</span></span>
-<span id="L126"><span class="lineNum">     126</span> <span class="tlaGNC">          34 :         auto source = std::vector&lt;std::string&gt;(features);</span></span>
-<span id="L127"><span class="lineNum">     127</span> <span class="tlaGNC">          34 :         source.push_back(className);</span></span>
-<span id="L128"><span class="lineNum">     128</span> <span class="tlaGNC">          34 :         auto combinations = doCombinations(source);</span></span>
+<span id="L125"><span class="lineNum">     125</span> <span class="tlaGNC">          68 :         auto result = std::vector&lt;double&gt;();</span></span>
+<span id="L126"><span class="lineNum">     126</span> <span class="tlaGNC">          68 :         auto source = std::vector&lt;std::string&gt;(features);</span></span>
+<span id="L127"><span class="lineNum">     127</span> <span class="tlaGNC">          68 :         source.push_back(className);</span></span>
+<span id="L128"><span class="lineNum">     128</span> <span class="tlaGNC">          68 :         auto combinations = doCombinations(source);</span></span>
 <span id="L129"><span class="lineNum">     129</span>              :         // Compute class prior</span>
-<span id="L130"><span class="lineNum">     130</span> <span class="tlaGNC">          34 :         auto margin = torch::zeros({ classNumStates }, torch::kFloat);</span></span>
-<span id="L131"><span class="lineNum">     131</span> <span class="tlaGNC">         184 :         for (int value = 0; value &lt; classNumStates; ++value) {</span></span>
-<span id="L132"><span class="lineNum">     132</span> <span class="tlaGNC">         450 :             auto mask = samples.index({ -1,  &quot;...&quot; }) == value;</span></span>
-<span id="L133"><span class="lineNum">     133</span> <span class="tlaGNC">         150 :             margin[value] = mask.sum().item&lt;double&gt;() / samples.size(1);</span></span>
-<span id="L134"><span class="lineNum">     134</span> <span class="tlaGNC">         150 :         }</span></span>
-<span id="L135"><span class="lineNum">     135</span> <span class="tlaGNC">         918 :         for (auto [first, second] : combinations) {</span></span>
-<span id="L136"><span class="lineNum">     136</span> <span class="tlaGNC">         884 :             int index_first = find(features.begin(), features.end(), first) - features.begin();</span></span>
-<span id="L137"><span class="lineNum">     137</span> <span class="tlaGNC">         884 :             int index_second = find(features.begin(), features.end(), second) - features.begin();</span></span>
-<span id="L138"><span class="lineNum">     138</span> <span class="tlaGNC">         884 :             double accumulated = 0;</span></span>
-<span id="L139"><span class="lineNum">     139</span> <span class="tlaGNC">        5240 :             for (int value = 0; value &lt; classNumStates; ++value) {</span></span>
-<span id="L140"><span class="lineNum">     140</span> <span class="tlaGNC">       13068 :                 auto mask = samples.index({ -1, &quot;...&quot; }) == value;</span></span>
-<span id="L141"><span class="lineNum">     141</span> <span class="tlaGNC">       13068 :                 auto first_dataset = samples.index({ index_first, mask });</span></span>
-<span id="L142"><span class="lineNum">     142</span> <span class="tlaGNC">       13068 :                 auto second_dataset = samples.index({ index_second, mask });</span></span>
-<span id="L143"><span class="lineNum">     143</span> <span class="tlaGNC">        8712 :                 auto weights_dataset = weights.index({ mask });</span></span>
+<span id="L130"><span class="lineNum">     130</span> <span class="tlaGNC">          68 :         auto margin = torch::zeros({ classNumStates }, torch::kFloat);</span></span>
+<span id="L131"><span class="lineNum">     131</span> <span class="tlaGNC">         368 :         for (int value = 0; value &lt; classNumStates; ++value) {</span></span>
+<span id="L132"><span class="lineNum">     132</span> <span class="tlaGNC">        1200 :             auto mask = samples.index({ -1,  &quot;...&quot; }) == value;</span></span>
+<span id="L133"><span class="lineNum">     133</span> <span class="tlaGNC">         300 :             margin[value] = mask.sum().item&lt;double&gt;() / samples.size(1);</span></span>
+<span id="L134"><span class="lineNum">     134</span> <span class="tlaGNC">         300 :         }</span></span>
+<span id="L135"><span class="lineNum">     135</span> <span class="tlaGNC">        1836 :         for (auto [first, second] : combinations) {</span></span>
+<span id="L136"><span class="lineNum">     136</span> <span class="tlaGNC">        1768 :             int index_first = find(features.begin(), features.end(), first) - features.begin();</span></span>
+<span id="L137"><span class="lineNum">     137</span> <span class="tlaGNC">        1768 :             int index_second = find(features.begin(), features.end(), second) - features.begin();</span></span>
+<span id="L138"><span class="lineNum">     138</span> <span class="tlaGNC">        1768 :             double accumulated = 0;</span></span>
+<span id="L139"><span class="lineNum">     139</span> <span class="tlaGNC">       10480 :             for (int value = 0; value &lt; classNumStates; ++value) {</span></span>
+<span id="L140"><span class="lineNum">     140</span> <span class="tlaGNC">       34848 :                 auto mask = samples.index({ -1, &quot;...&quot; }) == value;</span></span>
+<span id="L141"><span class="lineNum">     141</span> <span class="tlaGNC">       26136 :                 auto first_dataset = samples.index({ index_first, mask });</span></span>
+<span id="L142"><span class="lineNum">     142</span> <span class="tlaGNC">       26136 :                 auto second_dataset = samples.index({ index_second, mask });</span></span>
+<span id="L143"><span class="lineNum">     143</span> <span class="tlaGNC">       17424 :                 auto weights_dataset = weights.index({ mask });</span></span>
 <span id="L144"><span class="lineNum">     144</span> <span class="tlaGNC">        8712 :                 auto mi = mutualInformation(first_dataset, second_dataset, weights_dataset);</span></span>
-<span id="L145"><span class="lineNum">     145</span> <span class="tlaGNC">        4356 :                 auto pb = margin[value].item&lt;double&gt;();</span></span>
-<span id="L146"><span class="lineNum">     146</span> <span class="tlaGNC">        4356 :                 accumulated += pb * mi;</span></span>
-<span id="L147"><span class="lineNum">     147</span> <span class="tlaGNC">        4356 :             }</span></span>
-<span id="L148"><span class="lineNum">     148</span> <span class="tlaGNC">         884 :             result.push_back(accumulated);</span></span>
-<span id="L149"><span class="lineNum">     149</span> <span class="tlaGNC">         884 :         }</span></span>
-<span id="L150"><span class="lineNum">     150</span> <span class="tlaGNC">          34 :         long n_vars = source.size();</span></span>
-<span id="L151"><span class="lineNum">     151</span> <span class="tlaGNC">          34 :         auto matrix = torch::zeros({ n_vars, n_vars });</span></span>
-<span id="L152"><span class="lineNum">     152</span> <span class="tlaGNC">          34 :         auto indices = torch::triu_indices(n_vars, n_vars, 1);</span></span>
-<span id="L153"><span class="lineNum">     153</span> <span class="tlaGNC">         918 :         for (auto i = 0; i &lt; result.size(); ++i) {</span></span>
-<span id="L154"><span class="lineNum">     154</span> <span class="tlaGNC">         884 :             auto x = indices[0][i];</span></span>
-<span id="L155"><span class="lineNum">     155</span> <span class="tlaGNC">         884 :             auto y = indices[1][i];</span></span>
-<span id="L156"><span class="lineNum">     156</span> <span class="tlaGNC">         884 :             matrix[x][y] = result[i];</span></span>
-<span id="L157"><span class="lineNum">     157</span> <span class="tlaGNC">         884 :             matrix[y][x] = result[i];</span></span>
-<span id="L158"><span class="lineNum">     158</span> <span class="tlaGNC">         884 :         }</span></span>
-<span id="L159"><span class="lineNum">     159</span> <span class="tlaGNC">          68 :         return matrix;</span></span>
-<span id="L160"><span class="lineNum">     160</span> <span class="tlaGNC">       21964 :     }</span></span>
+<span id="L145"><span class="lineNum">     145</span> <span class="tlaGNC">        8712 :                 auto pb = margin[value].item&lt;double&gt;();</span></span>
+<span id="L146"><span class="lineNum">     146</span> <span class="tlaGNC">        8712 :                 accumulated += pb * mi;</span></span>
+<span id="L147"><span class="lineNum">     147</span> <span class="tlaGNC">        8712 :             }</span></span>
+<span id="L148"><span class="lineNum">     148</span> <span class="tlaGNC">        1768 :             result.push_back(accumulated);</span></span>
+<span id="L149"><span class="lineNum">     149</span> <span class="tlaGNC">        1768 :         }</span></span>
+<span id="L150"><span class="lineNum">     150</span> <span class="tlaGNC">          68 :         long n_vars = source.size();</span></span>
+<span id="L151"><span class="lineNum">     151</span> <span class="tlaGNC">          68 :         auto matrix = torch::zeros({ n_vars, n_vars });</span></span>
+<span id="L152"><span class="lineNum">     152</span> <span class="tlaGNC">          68 :         auto indices = torch::triu_indices(n_vars, n_vars, 1);</span></span>
+<span id="L153"><span class="lineNum">     153</span> <span class="tlaGNC">        1836 :         for (auto i = 0; i &lt; result.size(); ++i) {</span></span>
+<span id="L154"><span class="lineNum">     154</span> <span class="tlaGNC">        1768 :             auto x = indices[0][i];</span></span>
+<span id="L155"><span class="lineNum">     155</span> <span class="tlaGNC">        1768 :             auto y = indices[1][i];</span></span>
+<span id="L156"><span class="lineNum">     156</span> <span class="tlaGNC">        1768 :             matrix[x][y] = result[i];</span></span>
+<span id="L157"><span class="lineNum">     157</span> <span class="tlaGNC">        1768 :             matrix[y][x] = result[i];</span></span>
+<span id="L158"><span class="lineNum">     158</span> <span class="tlaGNC">        1768 :         }</span></span>
+<span id="L159"><span class="lineNum">     159</span> <span class="tlaGNC">         136 :         return matrix;</span></span>
+<span id="L160"><span class="lineNum">     160</span> <span class="tlaGNC">       35216 :     }</span></span>
 <span id="L161"><span class="lineNum">     161</span>              :     // Measured in nats (natural logarithm (log) base e)</span>
 <span id="L162"><span class="lineNum">     162</span>              :     // Elements of Information Theory, 2nd Edition, Thomas M. Cover, Joy A. Thomas p. 14</span>
-<span id="L163"><span class="lineNum">     163</span> <span class="tlaGNC">        8438 :     double Metrics::entropy(const torch::Tensor&amp; feature, const torch::Tensor&amp; weights)</span></span>
+<span id="L163"><span class="lineNum">     163</span> <span class="tlaGNC">       17410 :     double Metrics::entropy(const torch::Tensor&amp; feature, const torch::Tensor&amp; weights)</span></span>
 <span id="L164"><span class="lineNum">     164</span>              :     {</span>
-<span id="L165"><span class="lineNum">     165</span> <span class="tlaGNC">        8438 :         torch::Tensor counts = feature.bincount(weights);</span></span>
-<span id="L166"><span class="lineNum">     166</span> <span class="tlaGNC">        8438 :         double totalWeight = counts.sum().item&lt;double&gt;();</span></span>
-<span id="L167"><span class="lineNum">     167</span> <span class="tlaGNC">        8438 :         torch::Tensor probs = counts.to(torch::kFloat) / totalWeight;</span></span>
-<span id="L168"><span class="lineNum">     168</span> <span class="tlaGNC">        8438 :         torch::Tensor logProbs = torch::log(probs);</span></span>
-<span id="L169"><span class="lineNum">     169</span> <span class="tlaGNC">        8438 :         torch::Tensor entropy = -probs * logProbs;</span></span>
-<span id="L170"><span class="lineNum">     170</span> <span class="tlaGNC">       25314 :         return entropy.nansum().item&lt;double&gt;();</span></span>
-<span id="L171"><span class="lineNum">     171</span> <span class="tlaGNC">        8438 :     }</span></span>
+<span id="L165"><span class="lineNum">     165</span> <span class="tlaGNC">       17410 :         torch::Tensor counts = feature.bincount(weights);</span></span>
+<span id="L166"><span class="lineNum">     166</span> <span class="tlaGNC">       17410 :         double totalWeight = counts.sum().item&lt;double&gt;();</span></span>
+<span id="L167"><span class="lineNum">     167</span> <span class="tlaGNC">       34820 :         torch::Tensor probs = counts.to(torch::kFloat) / totalWeight;</span></span>
+<span id="L168"><span class="lineNum">     168</span> <span class="tlaGNC">       17410 :         torch::Tensor logProbs = torch::log(probs);</span></span>
+<span id="L169"><span class="lineNum">     169</span> <span class="tlaGNC">       17410 :         torch::Tensor entropy = -probs * logProbs;</span></span>
+<span id="L170"><span class="lineNum">     170</span> <span class="tlaGNC">       34820 :         return entropy.nansum().item&lt;double&gt;();</span></span>
+<span id="L171"><span class="lineNum">     171</span> <span class="tlaGNC">       17410 :     }</span></span>
 <span id="L172"><span class="lineNum">     172</span>              :     // H(Y|X) = sum_{x in X} p(x) H(Y|X=x)</span>
-<span id="L173"><span class="lineNum">     173</span> <span class="tlaGNC">        8136 :     double Metrics::conditionalEntropy(const torch::Tensor&amp; firstFeature, const torch::Tensor&amp; secondFeature, const torch::Tensor&amp; weights)</span></span>
+<span id="L173"><span class="lineNum">     173</span> <span class="tlaGNC">       39032 :     double Metrics::conditionalEntropy(const torch::Tensor&amp; firstFeature, const torch::Tensor&amp; secondFeature, const torch::Tensor&amp; weights)</span></span>
 <span id="L174"><span class="lineNum">     174</span>              :     {</span>
-<span id="L175"><span class="lineNum">     175</span> <span class="tlaGNC">        8136 :         int numSamples = firstFeature.sizes()[0];</span></span>
-<span id="L176"><span class="lineNum">     176</span> <span class="tlaGNC">        8136 :         torch::Tensor featureCounts = secondFeature.bincount(weights);</span></span>
-<span id="L177"><span class="lineNum">     177</span> <span class="tlaGNC">        8136 :         std::unordered_map&lt;int, std::unordered_map&lt;int, double&gt;&gt; jointCounts;</span></span>
-<span id="L178"><span class="lineNum">     178</span> <span class="tlaGNC">        8136 :         double totalWeight = 0;</span></span>
-<span id="L179"><span class="lineNum">     179</span> <span class="tlaGNC">     1916346 :         for (auto i = 0; i &lt; numSamples; i++) {</span></span>
-<span id="L180"><span class="lineNum">     180</span> <span class="tlaGNC">     1908210 :             jointCounts[secondFeature[i].item&lt;int&gt;()][firstFeature[i].item&lt;int&gt;()] += weights[i].item&lt;double&gt;();</span></span>
-<span id="L181"><span class="lineNum">     181</span> <span class="tlaGNC">     1908210 :             totalWeight += weights[i].item&lt;float&gt;();</span></span>
+<span id="L175"><span class="lineNum">     175</span> <span class="tlaGNC">       39032 :         int numSamples = firstFeature.sizes()[0];</span></span>
+<span id="L176"><span class="lineNum">     176</span> <span class="tlaGNC">       39032 :         torch::Tensor featureCounts = secondFeature.bincount(weights);</span></span>
+<span id="L177"><span class="lineNum">     177</span> <span class="tlaGNC">       39032 :         std::unordered_map&lt;int, std::unordered_map&lt;int, double&gt;&gt; jointCounts;</span></span>
+<span id="L178"><span class="lineNum">     178</span> <span class="tlaGNC">       39032 :         double totalWeight = 0;</span></span>
+<span id="L179"><span class="lineNum">     179</span> <span class="tlaGNC">    12230712 :         for (auto i = 0; i &lt; numSamples; i++) {</span></span>
+<span id="L180"><span class="lineNum">     180</span> <span class="tlaGNC">    12191680 :             jointCounts[secondFeature[i].item&lt;int&gt;()][firstFeature[i].item&lt;int&gt;()] += weights[i].item&lt;double&gt;();</span></span>
+<span id="L181"><span class="lineNum">     181</span> <span class="tlaGNC">    12191680 :             totalWeight += weights[i].item&lt;float&gt;();</span></span>
 <span id="L182"><span class="lineNum">     182</span>              :         }</span>
-<span id="L183"><span class="lineNum">     183</span> <span class="tlaGNC">        8136 :         if (totalWeight == 0)</span></span>
+<span id="L183"><span class="lineNum">     183</span> <span class="tlaGNC">       39032 :         if (totalWeight == 0)</span></span>
 <span id="L184"><span class="lineNum">     184</span> <span class="tlaUNC tlaBgUNC">           0 :             return 0;</span></span>
-<span id="L185"><span class="lineNum">     185</span> <span class="tlaGNC tlaBgGNC">        8136 :         double entropyValue = 0;</span></span>
-<span id="L186"><span class="lineNum">     186</span> <span class="tlaGNC">       39281 :         for (int value = 0; value &lt; featureCounts.sizes()[0]; ++value) {</span></span>
-<span id="L187"><span class="lineNum">     187</span> <span class="tlaGNC">       31145 :             double p_f = featureCounts[value].item&lt;double&gt;() / totalWeight;</span></span>
-<span id="L188"><span class="lineNum">     188</span> <span class="tlaGNC">       31145 :             double entropy_f = 0;</span></span>
-<span id="L189"><span class="lineNum">     189</span> <span class="tlaGNC">      110289 :             for (auto&amp; [label, jointCount] : jointCounts[value]) {</span></span>
-<span id="L190"><span class="lineNum">     190</span> <span class="tlaGNC">       79144 :                 double p_l_f = jointCount / featureCounts[value].item&lt;double&gt;();</span></span>
-<span id="L191"><span class="lineNum">     191</span> <span class="tlaGNC">       79144 :                 if (p_l_f &gt; 0) {</span></span>
-<span id="L192"><span class="lineNum">     192</span> <span class="tlaGNC">       79144 :                     entropy_f -= p_l_f * log(p_l_f);</span></span>
+<span id="L185"><span class="lineNum">     185</span> <span class="tlaGNC tlaBgGNC">       39032 :         double entropyValue = 0;</span></span>
+<span id="L186"><span class="lineNum">     186</span> <span class="tlaGNC">      147514 :         for (int value = 0; value &lt; featureCounts.sizes()[0]; ++value) {</span></span>
+<span id="L187"><span class="lineNum">     187</span> <span class="tlaGNC">      108482 :             double p_f = featureCounts[value].item&lt;double&gt;() / totalWeight;</span></span>
+<span id="L188"><span class="lineNum">     188</span> <span class="tlaGNC">      108482 :             double entropy_f = 0;</span></span>
+<span id="L189"><span class="lineNum">     189</span> <span class="tlaGNC">      416244 :             for (auto&amp; [label, jointCount] : jointCounts[value]) {</span></span>
+<span id="L190"><span class="lineNum">     190</span> <span class="tlaGNC">      307762 :                 double p_l_f = jointCount / featureCounts[value].item&lt;double&gt;();</span></span>
+<span id="L191"><span class="lineNum">     191</span> <span class="tlaGNC">      307762 :                 if (p_l_f &gt; 0) {</span></span>
+<span id="L192"><span class="lineNum">     192</span> <span class="tlaGNC">      307762 :                     entropy_f -= p_l_f * log(p_l_f);</span></span>
 <span id="L193"><span class="lineNum">     193</span>              :                 } else {</span>
 <span id="L194"><span class="lineNum">     194</span> <span class="tlaUNC tlaBgUNC">           0 :                     entropy_f = 0;</span></span>
 <span id="L195"><span class="lineNum">     195</span>              :                 }</span>
 <span id="L196"><span class="lineNum">     196</span>              :             }</span>
-<span id="L197"><span class="lineNum">     197</span> <span class="tlaGNC tlaBgGNC">       31145 :             entropyValue += p_f * entropy_f;</span></span>
+<span id="L197"><span class="lineNum">     197</span> <span class="tlaGNC tlaBgGNC">      108482 :             entropyValue += p_f * entropy_f;</span></span>
 <span id="L198"><span class="lineNum">     198</span>              :         }</span>
-<span id="L199"><span class="lineNum">     199</span> <span class="tlaGNC">        8136 :         return entropyValue;</span></span>
-<span id="L200"><span class="lineNum">     200</span> <span class="tlaGNC">        8136 :     }</span></span>
+<span id="L199"><span class="lineNum">     199</span> <span class="tlaGNC">       39032 :         return entropyValue;</span></span>
+<span id="L200"><span class="lineNum">     200</span> <span class="tlaGNC">       39032 :     }</span></span>
 <span id="L201"><span class="lineNum">     201</span>              :     // H(X|Y,C) = sum_{y in Y, c in C} p(x,c) H(X|Y=y,C=c)</span>
-<span id="L202"><span class="lineNum">     202</span> <span class="tlaGNC">         653 :     double Metrics::conditionalEntropy(const torch::Tensor&amp; firstFeature, const torch::Tensor&amp; secondFeature, const torch::Tensor&amp; labels, const torch::Tensor&amp; weights)</span></span>
+<span id="L202"><span class="lineNum">     202</span> <span class="tlaGNC">       23888 :     double Metrics::conditionalEntropy(const torch::Tensor&amp; firstFeature, const torch::Tensor&amp; secondFeature, const torch::Tensor&amp; labels, const torch::Tensor&amp; weights)</span></span>
 <span id="L203"><span class="lineNum">     203</span>              :     {</span>
 <span id="L204"><span class="lineNum">     204</span>              :         // Ensure the tensors are of the same length</span>
-<span id="L205"><span class="lineNum">     205</span> <span class="tlaGNC">         653 :         assert(firstFeature.size(0) == secondFeature.size(0) &amp;&amp; firstFeature.size(0) == labels.size(0) &amp;&amp; firstFeature.size(0) == weights.size(0));</span></span>
+<span id="L205"><span class="lineNum">     205</span> <span class="tlaGNC">       23888 :         assert(firstFeature.size(0) == secondFeature.size(0) &amp;&amp; firstFeature.size(0) == labels.size(0) &amp;&amp; firstFeature.size(0) == weights.size(0));</span></span>
 <span id="L206"><span class="lineNum">     206</span>              :         // Convert tensors to vectors for easier processing</span>
-<span id="L207"><span class="lineNum">     207</span> <span class="tlaGNC">         653 :         auto firstFeatureData = firstFeature.accessor&lt;int, 1&gt;();</span></span>
-<span id="L208"><span class="lineNum">     208</span> <span class="tlaGNC">         653 :         auto secondFeatureData = secondFeature.accessor&lt;int, 1&gt;();</span></span>
-<span id="L209"><span class="lineNum">     209</span> <span class="tlaGNC">         653 :         auto labelsData = labels.accessor&lt;int, 1&gt;();</span></span>
-<span id="L210"><span class="lineNum">     210</span> <span class="tlaGNC">         653 :         auto weightsData = weights.accessor&lt;double, 1&gt;();</span></span>
-<span id="L211"><span class="lineNum">     211</span> <span class="tlaGNC">         653 :         int numSamples = firstFeature.size(0);</span></span>
+<span id="L207"><span class="lineNum">     207</span> <span class="tlaGNC">       23888 :         auto firstFeatureData = firstFeature.accessor&lt;int, 1&gt;();</span></span>
+<span id="L208"><span class="lineNum">     208</span> <span class="tlaGNC">       23888 :         auto secondFeatureData = secondFeature.accessor&lt;int, 1&gt;();</span></span>
+<span id="L209"><span class="lineNum">     209</span> <span class="tlaGNC">       23888 :         auto labelsData = labels.accessor&lt;int, 1&gt;();</span></span>
+<span id="L210"><span class="lineNum">     210</span> <span class="tlaGNC">       23888 :         auto weightsData = weights.accessor&lt;double, 1&gt;();</span></span>
+<span id="L211"><span class="lineNum">     211</span> <span class="tlaGNC">       23888 :         int numSamples = firstFeature.size(0);</span></span>
 <span id="L212"><span class="lineNum">     212</span>              :         // Maps for joint and marginal probabilities</span>
-<span id="L213"><span class="lineNum">     213</span> <span class="tlaGNC">         653 :         std::map&lt;std::tuple&lt;int, int, int&gt;, double&gt; jointCount;</span></span>
-<span id="L214"><span class="lineNum">     214</span> <span class="tlaGNC">         653 :         std::map&lt;std::tuple&lt;int, int&gt;, double&gt; marginalCount;</span></span>
+<span id="L213"><span class="lineNum">     213</span> <span class="tlaGNC">       23888 :         std::map&lt;std::tuple&lt;int, int, int&gt;, double&gt; jointCount;</span></span>
+<span id="L214"><span class="lineNum">     214</span> <span class="tlaGNC">       23888 :         std::map&lt;std::tuple&lt;int, int&gt;, double&gt; marginalCount;</span></span>
 <span id="L215"><span class="lineNum">     215</span>              :         // Compute joint and marginal counts</span>
-<span id="L216"><span class="lineNum">     216</span> <span class="tlaGNC">      384427 :         for (int i = 0; i &lt; numSamples; ++i) {</span></span>
-<span id="L217"><span class="lineNum">     217</span> <span class="tlaGNC">      383774 :             auto keyJoint = std::make_tuple(firstFeatureData[i], labelsData[i], secondFeatureData[i]);</span></span>
-<span id="L218"><span class="lineNum">     218</span> <span class="tlaGNC">      383774 :             auto keyMarginal = std::make_tuple(firstFeatureData[i], labelsData[i]);</span></span>
+<span id="L216"><span class="lineNum">     216</span> <span class="tlaGNC">     9107428 :         for (int i = 0; i &lt; numSamples; ++i) {</span></span>
+<span id="L217"><span class="lineNum">     217</span> <span class="tlaGNC">     9083540 :             auto keyJoint = std::make_tuple(firstFeatureData[i], labelsData[i], secondFeatureData[i]);</span></span>
+<span id="L218"><span class="lineNum">     218</span> <span class="tlaGNC">     9083540 :             auto keyMarginal = std::make_tuple(firstFeatureData[i], labelsData[i]);</span></span>
 <span id="L219"><span class="lineNum">     219</span>              : </span>
-<span id="L220"><span class="lineNum">     220</span> <span class="tlaGNC">      383774 :             jointCount[keyJoint] += weightsData[i];</span></span>
-<span id="L221"><span class="lineNum">     221</span> <span class="tlaGNC">      383774 :             marginalCount[keyMarginal] += weightsData[i];</span></span>
+<span id="L220"><span class="lineNum">     220</span> <span class="tlaGNC">     9083540 :             jointCount[keyJoint] += weightsData[i];</span></span>
+<span id="L221"><span class="lineNum">     221</span> <span class="tlaGNC">     9083540 :             marginalCount[keyMarginal] += weightsData[i];</span></span>
 <span id="L222"><span class="lineNum">     222</span>              :         }</span>
 <span id="L223"><span class="lineNum">     223</span>              :         // Total weight sum</span>
-<span id="L224"><span class="lineNum">     224</span> <span class="tlaGNC">         653 :         double totalWeight = torch::sum(weights).item&lt;double&gt;();</span></span>
-<span id="L225"><span class="lineNum">     225</span> <span class="tlaGNC">         653 :         if (totalWeight == 0)</span></span>
+<span id="L224"><span class="lineNum">     224</span> <span class="tlaGNC">       23888 :         double totalWeight = torch::sum(weights).item&lt;double&gt;();</span></span>
+<span id="L225"><span class="lineNum">     225</span> <span class="tlaGNC">       23888 :         if (totalWeight == 0)</span></span>
 <span id="L226"><span class="lineNum">     226</span> <span class="tlaUNC tlaBgUNC">           0 :             return 0;</span></span>
 <span id="L227"><span class="lineNum">     227</span>              :         // Compute the conditional entropy</span>
-<span id="L228"><span class="lineNum">     228</span> <span class="tlaGNC tlaBgGNC">         653 :         double conditionalEntropy = 0.0;</span></span>
-<span id="L229"><span class="lineNum">     229</span> <span class="tlaGNC">       28893 :         for (const auto&amp; [keyJoint, jointFreq] : jointCount) {</span></span>
-<span id="L230"><span class="lineNum">     230</span> <span class="tlaGNC">       28240 :             auto [x, c, y] = keyJoint;</span></span>
-<span id="L231"><span class="lineNum">     231</span> <span class="tlaGNC">       28240 :             auto keyMarginal = std::make_tuple(x, c);</span></span>
+<span id="L228"><span class="lineNum">     228</span> <span class="tlaGNC tlaBgGNC">       23888 :         double conditionalEntropy = 0.0;</span></span>
+<span id="L229"><span class="lineNum">     229</span> <span class="tlaGNC">      420464 :         for (const auto&amp; [keyJoint, jointFreq] : jointCount) {</span></span>
+<span id="L230"><span class="lineNum">     230</span> <span class="tlaGNC">      396576 :             auto [x, c, y] = keyJoint;</span></span>
+<span id="L231"><span class="lineNum">     231</span> <span class="tlaGNC">      396576 :             auto keyMarginal = std::make_tuple(x, c);</span></span>
 <span id="L232"><span class="lineNum">     232</span>              :             //double p_xc = marginalCount[keyMarginal] / totalWeight;</span>
-<span id="L233"><span class="lineNum">     233</span> <span class="tlaGNC">       28240 :             double p_y_given_xc = jointFreq / marginalCount[keyMarginal];</span></span>
-<span id="L234"><span class="lineNum">     234</span> <span class="tlaGNC">       28240 :             if (p_y_given_xc &gt; 0) {</span></span>
-<span id="L235"><span class="lineNum">     235</span> <span class="tlaGNC">       28240 :                 conditionalEntropy -= (jointFreq / totalWeight) * std::log(p_y_given_xc);</span></span>
+<span id="L233"><span class="lineNum">     233</span> <span class="tlaGNC">      396576 :             double p_y_given_xc = jointFreq / marginalCount[keyMarginal];</span></span>
+<span id="L234"><span class="lineNum">     234</span> <span class="tlaGNC">      396576 :             if (p_y_given_xc &gt; 0) {</span></span>
+<span id="L235"><span class="lineNum">     235</span> <span class="tlaGNC">      396576 :                 conditionalEntropy -= (jointFreq / totalWeight) * std::log(p_y_given_xc);</span></span>
 <span id="L236"><span class="lineNum">     236</span>              :             }</span>
 <span id="L237"><span class="lineNum">     237</span>              :         }</span>
-<span id="L238"><span class="lineNum">     238</span> <span class="tlaGNC">         653 :         return conditionalEntropy;</span></span>
-<span id="L239"><span class="lineNum">     239</span> <span class="tlaGNC">         653 :     }</span></span>
+<span id="L238"><span class="lineNum">     238</span> <span class="tlaGNC">       23888 :         return conditionalEntropy;</span></span>
+<span id="L239"><span class="lineNum">     239</span> <span class="tlaGNC">       23888 :     }</span></span>
 <span id="L240"><span class="lineNum">     240</span>              :     // I(X;Y) = H(Y) - H(Y|X) ; I(X;Y) &gt;= 0</span>
-<span id="L241"><span class="lineNum">     241</span> <span class="tlaGNC">        7489 :     double Metrics::mutualInformation(const torch::Tensor&amp; firstFeature, const torch::Tensor&amp; secondFeature, const torch::Tensor&amp; weights)</span></span>
+<span id="L241"><span class="lineNum">     241</span> <span class="tlaGNC">       15156 :     double Metrics::mutualInformation(const torch::Tensor&amp; firstFeature, const torch::Tensor&amp; secondFeature, const torch::Tensor&amp; weights)</span></span>
 <span id="L242"><span class="lineNum">     242</span>              :     {</span>
-<span id="L243"><span class="lineNum">     243</span> <span class="tlaGNC">        7489 :         return std::max(entropy(firstFeature, weights) - conditionalEntropy(firstFeature, secondFeature, weights), 0.0);</span></span>
+<span id="L243"><span class="lineNum">     243</span> <span class="tlaGNC">       15156 :         return std::max(entropy(firstFeature, weights) - conditionalEntropy(firstFeature, secondFeature, weights), 0.0);</span></span>
 <span id="L244"><span class="lineNum">     244</span>              :     }</span>
 <span id="L245"><span class="lineNum">     245</span>              :     // I(X;Y|C) = H(X|C) - H(X|Y,C) &gt;= 0</span>
-<span id="L246"><span class="lineNum">     246</span> <span class="tlaGNC">         647 :     double Metrics::conditionalMutualInformation(const torch::Tensor&amp; firstFeature, const torch::Tensor&amp; secondFeature, const torch::Tensor&amp; labels, const torch::Tensor&amp; weights)</span></span>
+<span id="L246"><span class="lineNum">     246</span> <span class="tlaGNC">       23876 :     double Metrics::conditionalMutualInformation(const torch::Tensor&amp; firstFeature, const torch::Tensor&amp; secondFeature, const torch::Tensor&amp; labels, const torch::Tensor&amp; weights)</span></span>
 <span id="L247"><span class="lineNum">     247</span>              :     {</span>
-<span id="L248"><span class="lineNum">     248</span> <span class="tlaGNC">         647 :         return std::max(conditionalEntropy(firstFeature, labels, weights) - conditionalEntropy(firstFeature, secondFeature, labels, weights), 0.0);</span></span>
+<span id="L248"><span class="lineNum">     248</span> <span class="tlaGNC">       23876 :         return std::max(conditionalEntropy(firstFeature, labels, weights) - conditionalEntropy(firstFeature, secondFeature, labels, weights), 0.0);</span></span>
 <span id="L249"><span class="lineNum">     249</span>              :     }</span>
 <span id="L250"><span class="lineNum">     250</span>              :     /*</span>
 <span id="L251"><span class="lineNum">     251</span>              :     Compute the maximum spanning tree considering the weights as distances</span>
 <span id="L252"><span class="lineNum">     252</span>              :     and the indices of the weights as nodes of this square matrix using</span>
 <span id="L253"><span class="lineNum">     253</span>              :     Kruskal algorithm</span>
 <span id="L254"><span class="lineNum">     254</span>              :     */</span>
-<span id="L255"><span class="lineNum">     255</span> <span class="tlaGNC">          29 :     std::vector&lt;std::pair&lt;int, int&gt;&gt; Metrics::maximumSpanningTree(const std::vector&lt;std::string&gt;&amp; features, const torch::Tensor&amp; weights, const int root)</span></span>
+<span id="L255"><span class="lineNum">     255</span> <span class="tlaGNC">          58 :     std::vector&lt;std::pair&lt;int, int&gt;&gt; Metrics::maximumSpanningTree(const std::vector&lt;std::string&gt;&amp; features, const torch::Tensor&amp; weights, const int root)</span></span>
 <span id="L256"><span class="lineNum">     256</span>              :     {</span>
-<span id="L257"><span class="lineNum">     257</span> <span class="tlaGNC">          29 :         auto mst = MST(features, weights, root);</span></span>
-<span id="L258"><span class="lineNum">     258</span> <span class="tlaGNC">          58 :         return mst.maximumSpanningTree();</span></span>
-<span id="L259"><span class="lineNum">     259</span> <span class="tlaGNC">          29 :     }</span></span>
+<span id="L257"><span class="lineNum">     257</span> <span class="tlaGNC">          58 :         auto mst = MST(features, weights, root);</span></span>
+<span id="L258"><span class="lineNum">     258</span> <span class="tlaGNC">         116 :         return mst.maximumSpanningTree();</span></span>
+<span id="L259"><span class="lineNum">     259</span> <span class="tlaGNC">          58 :     }</span></span>
 <span id="L260"><span class="lineNum">     260</span>              : }</span>
         </pre>
               </td>
@@ -336,7 +336,7 @@
 
           <table width="100%" border=0 cellspacing=0 cellpadding=0>
             <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
-            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.1-1</a></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.0-1</a></td></tr>
           </table>
           <br>
 

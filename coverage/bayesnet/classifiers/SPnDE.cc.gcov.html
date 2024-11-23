@@ -19,7 +19,7 @@
                 <table cellpadding=1 border=0 width="100%">
           <tr>
             <td width="10%" class="headerItem">Current view:</td>
-            <td width="10%" class="headerValue"><a href="../../index.html" target="_parent" title="Click to go to top-level">top level</a> - <a href="index.html" target="_parent" title="Click to go to directory bayesnet/classifiers">bayesnet/classifiers</a> - SPnDE.cc<span style="font-size: 80%;"> (source / <a href="SPnDE.cc.func-c.html" title="Click to go to function table">functions</a>)</span></td>
+            <td width="10%" class="headerValue"><a href="../../index.html" target="_parent">top level</a> - <a href="index.html" target="_parent">bayesnet/classifiers</a> - SPnDE.cc<span style="font-size: 80%;"> (source / <a href="SPnDE.cc.func-c.html">functions</a>)</span></td>
             <td width="5%"></td>
             <td width="5%"></td>
             <td width="5%" class="headerCovTableHead">Coverage</td>
@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-05-23 18:53:27</td>
+            <td class="headerValue">2024-11-23 18:53:13</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -78,31 +78,31 @@
 <span id="L8"><span class="lineNum">       8</span>              : </span>
 <span id="L9"><span class="lineNum">       9</span>              : namespace bayesnet {</span>
 <span id="L10"><span class="lineNum">      10</span>              : </span>
-<span id="L11"><span class="lineNum">      11</span> <span class="tlaGNC tlaBgGNC">         167 :     SPnDE::SPnDE(std::vector&lt;int&gt; parents) : Classifier(Network()), parents(parents) {}</span></span>
+<span id="L11"><span class="lineNum">      11</span> <span class="tlaGNC tlaBgGNC">         742 :     SPnDE::SPnDE(std::vector&lt;int&gt; parents) : Classifier(Network()), parents(parents) {}</span></span>
 <span id="L12"><span class="lineNum">      12</span>              : </span>
-<span id="L13"><span class="lineNum">      13</span> <span class="tlaGNC">         167 :     void SPnDE::buildModel(const torch::Tensor&amp; weights)</span></span>
+<span id="L13"><span class="lineNum">      13</span> <span class="tlaGNC">         742 :     void SPnDE::buildModel(const torch::Tensor&amp; weights)</span></span>
 <span id="L14"><span class="lineNum">      14</span>              :     {</span>
 <span id="L15"><span class="lineNum">      15</span>              :         // 0. Add all nodes to the model</span>
-<span id="L16"><span class="lineNum">      16</span> <span class="tlaGNC">         167 :         addNodes();</span></span>
-<span id="L17"><span class="lineNum">      17</span> <span class="tlaGNC">         167 :         std::vector&lt;int&gt; attributes;</span></span>
-<span id="L18"><span class="lineNum">      18</span> <span class="tlaGNC">        1587 :         for (int i = 0; i &lt; static_cast&lt;int&gt;(features.size()); ++i) {</span></span>
-<span id="L19"><span class="lineNum">      19</span> <span class="tlaGNC">        1420 :             if (std::find(parents.begin(), parents.end(), i) == parents.end()) {</span></span>
-<span id="L20"><span class="lineNum">      20</span> <span class="tlaGNC">        1086 :                 attributes.push_back(i);</span></span>
+<span id="L16"><span class="lineNum">      16</span> <span class="tlaGNC">         742 :         addNodes();</span></span>
+<span id="L17"><span class="lineNum">      17</span> <span class="tlaGNC">         742 :         std::vector&lt;int&gt; attributes;</span></span>
+<span id="L18"><span class="lineNum">      18</span> <span class="tlaGNC">        8928 :         for (int i = 0; i &lt; static_cast&lt;int&gt;(features.size()); ++i) {</span></span>
+<span id="L19"><span class="lineNum">      19</span> <span class="tlaGNC">        8186 :             if (std::find(parents.begin(), parents.end(), i) == parents.end()) {</span></span>
+<span id="L20"><span class="lineNum">      20</span> <span class="tlaGNC">        6702 :                 attributes.push_back(i);</span></span>
 <span id="L21"><span class="lineNum">      21</span>              :             }</span>
 <span id="L22"><span class="lineNum">      22</span>              :         }</span>
 <span id="L23"><span class="lineNum">      23</span>              :         // 1. Add edges from the class node to all other nodes</span>
 <span id="L24"><span class="lineNum">      24</span>              :         // 2. Add edges from the parents nodes to all other nodes</span>
-<span id="L25"><span class="lineNum">      25</span> <span class="tlaGNC">        1253 :         for (const auto&amp; attribute : attributes) {</span></span>
-<span id="L26"><span class="lineNum">      26</span> <span class="tlaGNC">        1086 :             model.addEdge(className, features[attribute]);</span></span>
-<span id="L27"><span class="lineNum">      27</span> <span class="tlaGNC">        3258 :             for (const auto&amp; root : parents) {</span></span>
+<span id="L25"><span class="lineNum">      25</span> <span class="tlaGNC">        7444 :         for (const auto&amp; attribute : attributes) {</span></span>
+<span id="L26"><span class="lineNum">      26</span> <span class="tlaGNC">        6702 :             model.addEdge(className, features[attribute]);</span></span>
+<span id="L27"><span class="lineNum">      27</span> <span class="tlaGNC">       20106 :             for (const auto&amp; root : parents) {</span></span>
 <span id="L28"><span class="lineNum">      28</span>              : </span>
-<span id="L29"><span class="lineNum">      29</span> <span class="tlaGNC">        2172 :                 model.addEdge(features[root], features[attribute]);</span></span>
+<span id="L29"><span class="lineNum">      29</span> <span class="tlaGNC">       13404 :                 model.addEdge(features[root], features[attribute]);</span></span>
 <span id="L30"><span class="lineNum">      30</span>              :             }</span>
 <span id="L31"><span class="lineNum">      31</span>              :         }</span>
-<span id="L32"><span class="lineNum">      32</span> <span class="tlaGNC">         167 :     }</span></span>
-<span id="L33"><span class="lineNum">      33</span> <span class="tlaGNC">           6 :     std::vector&lt;std::string&gt; SPnDE::graph(const std::string&amp; name) const</span></span>
+<span id="L32"><span class="lineNum">      32</span> <span class="tlaGNC">         742 :     }</span></span>
+<span id="L33"><span class="lineNum">      33</span> <span class="tlaGNC">          16 :     std::vector&lt;std::string&gt; SPnDE::graph(const std::string&amp; name) const</span></span>
 <span id="L34"><span class="lineNum">      34</span>              :     {</span>
-<span id="L35"><span class="lineNum">      35</span> <span class="tlaGNC">           6 :         return model.graph(name);</span></span>
+<span id="L35"><span class="lineNum">      35</span> <span class="tlaGNC">          16 :         return model.graph(name);</span></span>
 <span id="L36"><span class="lineNum">      36</span>              :     }</span>
 <span id="L37"><span class="lineNum">      37</span>              : </span>
 <span id="L38"><span class="lineNum">      38</span>              : }</span>
@@ -114,7 +114,7 @@
 
           <table width="100%" border=0 cellspacing=0 cellpadding=0>
             <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
-            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.1-1</a></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.0-1</a></td></tr>
           </table>
           <br>
 

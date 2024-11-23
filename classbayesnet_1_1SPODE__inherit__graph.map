@@ -1,0 +1,9 @@
+<map id="bayesnet::SPODE" name="bayesnet::SPODE">
+<area shape="rect" id="Node000001" title=" " alt="" coords="25,151,152,175"/>
+<area shape="rect" id="Node000004" href="$classbayesnet_1_1SPODELd.html" title=" " alt="" coords="18,223,159,248"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="91,191,91,223,86,223,86,191"/>
+<area shape="rect" id="Node000002" href="$classbayesnet_1_1Classifier.html" title=" " alt="" coords="20,78,157,103"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,118,91,150,86,150,86,118"/>
+<area shape="rect" id="Node000003" href="$classbayesnet_1_1BaseClassifier.html" title=" " alt="" coords="5,5,172,30"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="91,46,91,78,86,78,86,46"/>
+</map>
