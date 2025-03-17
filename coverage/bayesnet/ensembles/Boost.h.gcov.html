@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-11-23 18:53:13</td>
+            <td class="headerValue">2025-03-17 10:48:59</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -97,29 +97,34 @@
 <span id="L27"><span class="lineNum">      27</span>              :     class Boost : public Ensemble {</span>
 <span id="L28"><span class="lineNum">      28</span>              :     public:</span>
 <span id="L29"><span class="lineNum">      29</span>              :         explicit Boost(bool predict_voting = false);</span>
-<span id="L30"><span class="lineNum">      30</span> <span class="tlaGNC tlaBgGNC">          66 :         virtual ~Boost() = default;</span></span>
+<span id="L30"><span class="lineNum">      30</span> <span class="tlaGNC tlaBgGNC">         189 :         virtual ~Boost() override = default;</span></span>
 <span id="L31"><span class="lineNum">      31</span>              :         void setHyperparameters(const nlohmann::json&amp; hyperparameters_) override;</span>
 <span id="L32"><span class="lineNum">      32</span>              :     protected:</span>
 <span id="L33"><span class="lineNum">      33</span>              :         std::vector&lt;int&gt; featureSelection(torch::Tensor&amp; weights_);</span>
 <span id="L34"><span class="lineNum">      34</span>              :         void buildModel(const torch::Tensor&amp; weights) override;</span>
 <span id="L35"><span class="lineNum">      35</span>              :         std::tuple&lt;torch::Tensor&amp;, double, bool&gt; update_weights(torch::Tensor&amp; ytrain, torch::Tensor&amp; ypred, torch::Tensor&amp; weights);</span>
 <span id="L36"><span class="lineNum">      36</span>              :         std::tuple&lt;torch::Tensor&amp;, double, bool&gt; update_weights_block(int k, torch::Tensor&amp; ytrain, torch::Tensor&amp; weights);</span>
-<span id="L37"><span class="lineNum">      37</span>              :         torch::Tensor X_train, y_train, X_test, y_test;</span>
-<span id="L38"><span class="lineNum">      38</span>              :         // Hyperparameters</span>
-<span id="L39"><span class="lineNum">      39</span>              :         bool bisection = true; // if true, use bisection stratety to add k models at once to the ensemble</span>
-<span id="L40"><span class="lineNum">      40</span>              :         int maxTolerance = 3;</span>
-<span id="L41"><span class="lineNum">      41</span>              :         std::string order_algorithm; // order to process the KBest features asc, desc, rand</span>
-<span id="L42"><span class="lineNum">      42</span>              :         bool convergence = true; //if true, stop when the model does not improve</span>
-<span id="L43"><span class="lineNum">      43</span>              :         bool convergence_best = false; // wether to keep the best accuracy to the moment or the last accuracy as prior accuracy</span>
-<span id="L44"><span class="lineNum">      44</span>              :         bool selectFeatures = false; // if true, use feature selection</span>
-<span id="L45"><span class="lineNum">      45</span>              :         std::string select_features_algorithm = Orders.DESC; // Selected feature selection algorithm</span>
-<span id="L46"><span class="lineNum">      46</span>              :         FeatureSelect* featureSelector = nullptr;</span>
-<span id="L47"><span class="lineNum">      47</span>              :         double threshold = -1;</span>
-<span id="L48"><span class="lineNum">      48</span>              :         bool block_update = false;</span>
-<span id="L49"><span class="lineNum">      49</span>              : </span>
-<span id="L50"><span class="lineNum">      50</span>              :     };</span>
-<span id="L51"><span class="lineNum">      51</span>              : }</span>
-<span id="L52"><span class="lineNum">      52</span>              : #endif</span>
+<span id="L37"><span class="lineNum">      37</span>              :         void add_model(std::unique_ptr&lt;Classifier&gt; model, double significance);</span>
+<span id="L38"><span class="lineNum">      38</span>              :         void remove_last_model();</span>
+<span id="L39"><span class="lineNum">      39</span>              :         //</span>
+<span id="L40"><span class="lineNum">      40</span>              :         // Attributes</span>
+<span id="L41"><span class="lineNum">      41</span>              :         //</span>
+<span id="L42"><span class="lineNum">      42</span>              :         torch::Tensor X_train, y_train, X_test, y_test;</span>
+<span id="L43"><span class="lineNum">      43</span>              :         // Hyperparameters</span>
+<span id="L44"><span class="lineNum">      44</span>              :         bool bisection = true; // if true, use bisection stratety to add k models at once to the ensemble</span>
+<span id="L45"><span class="lineNum">      45</span>              :         int maxTolerance = 3;</span>
+<span id="L46"><span class="lineNum">      46</span>              :         std::string order_algorithm = Orders.DESC; // order to process the KBest features asc, desc, rand</span>
+<span id="L47"><span class="lineNum">      47</span>              :         bool convergence = true; //if true, stop when the model does not improve</span>
+<span id="L48"><span class="lineNum">      48</span>              :         bool convergence_best = false; // wether to keep the best accuracy to the moment or the last accuracy as prior accuracy</span>
+<span id="L49"><span class="lineNum">      49</span>              :         bool selectFeatures = false; // if true, use feature selection</span>
+<span id="L50"><span class="lineNum">      50</span>              :         std::string select_features_algorithm; // Selected feature selection algorithm</span>
+<span id="L51"><span class="lineNum">      51</span>              :         FeatureSelect* featureSelector = nullptr;</span>
+<span id="L52"><span class="lineNum">      52</span>              :         double threshold = -1;</span>
+<span id="L53"><span class="lineNum">      53</span>              :         bool block_update = false; // if true, use block update algorithm, only meaningful if bisection is true</span>
+<span id="L54"><span class="lineNum">      54</span>              :         bool alpha_block = false; // if true, the alpha is computed with the ensemble built so far and the new model</span>
+<span id="L55"><span class="lineNum">      55</span>              :     };</span>
+<span id="L56"><span class="lineNum">      56</span>              : }</span>
+<span id="L57"><span class="lineNum">      57</span>              : #endif</span>
         </pre>
               </td>
             </tr>

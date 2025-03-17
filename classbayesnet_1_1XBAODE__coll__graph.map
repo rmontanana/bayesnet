@@ -1,0 +1,13 @@
+<map id="bayesnet::XBAODE" name="bayesnet::XBAODE">
+<area shape="rect" id="Node000001" title=" " alt="" coords="106,314,242,339"/>
+<area shape="rect" id="Node000002" href="$classbayesnet_1_1Boost.html" title=" " alt="" coords="116,240,232,265"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="176,280,176,314,171,314,171,280"/>
+<area shape="rect" id="Node000003" href="$classbayesnet_1_1Ensemble.html" title=" " alt="" coords="104,166,244,191"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="176,206,176,240,171,240,171,206"/>
+<area shape="rect" id="Node000004" href="$classbayesnet_1_1Classifier.html" title=" " alt="" coords="106,92,242,117"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="176,132,176,166,171,166,171,132"/>
+<area shape="rect" id="Node000005" href="$classbayesnet_1_1BaseClassifier.html" title=" " alt="" coords="5,5,172,30"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="113,39,164,90,161,94,109,43"/>
+<area shape="rect" id="Node000006" href="$classbayesnet_1_1Network.html" title=" " alt="" coords="195,5,326,30"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="240,43,187,94,183,90,236,39"/>
+</map>

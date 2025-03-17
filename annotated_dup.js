@@ -19,6 +19,10 @@ var annotated_dup =
       [ "SPODE", "classbayesnet_1_1SPODE.html", null ],
       [ "SPODELd", "classbayesnet_1_1SPODELd.html", null ],
       [ "TAN", "classbayesnet_1_1TAN.html", null ],
-      [ "TANLd", "classbayesnet_1_1TANLd.html", null ]
+      [ "TANLd", "classbayesnet_1_1TANLd.html", null ],
+      [ "XBA2DE", "classbayesnet_1_1XBA2DE.html", null ],
+      [ "XBAODE", "classbayesnet_1_1XBAODE.html", null ],
+      [ "XSp2de", "classbayesnet_1_1XSp2de.html", null ],
+      [ "XSpode", "classbayesnet_1_1XSpode.html", null ]
     ] ]
 ];

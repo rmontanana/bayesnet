@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-11-23 18:53:13</td>
+            <td class="headerValue">2025-03-17 10:48:59</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -84,13 +84,13 @@
 <span id="L14"><span class="lineNum">      14</span>              :     enum status_t { NORMAL, WARNING, ERROR };</span>
 <span id="L15"><span class="lineNum">      15</span>              :     class BaseClassifier {</span>
 <span id="L16"><span class="lineNum">      16</span>              :     public:</span>
-<span id="L17"><span class="lineNum">      17</span>              :         // X is nxm std::vector, y is nx1 std::vector</span>
-<span id="L18"><span class="lineNum">      18</span>              :         virtual BaseClassifier&amp; fit(std::vector&lt;std::vector&lt;int&gt;&gt;&amp; X, std::vector&lt;int&gt;&amp; y, const std::vector&lt;std::string&gt;&amp; features, const std::string&amp; className, std::map&lt;std::string, std::vector&lt;int&gt;&gt;&amp; states, const Smoothing_t smoothing) = 0;</span>
-<span id="L19"><span class="lineNum">      19</span>              :         // X is nxm tensor, y is nx1 tensor</span>
-<span id="L20"><span class="lineNum">      20</span>              :         virtual BaseClassifier&amp; fit(torch::Tensor&amp; X, torch::Tensor&amp; y, const std::vector&lt;std::string&gt;&amp; features, const std::string&amp; className, std::map&lt;std::string, std::vector&lt;int&gt;&gt;&amp; states, const Smoothing_t smoothing) = 0;</span>
-<span id="L21"><span class="lineNum">      21</span>              :         virtual BaseClassifier&amp; fit(torch::Tensor&amp; dataset, const std::vector&lt;std::string&gt;&amp; features, const std::string&amp; className, std::map&lt;std::string, std::vector&lt;int&gt;&gt;&amp; states, const Smoothing_t smoothing) = 0;</span>
-<span id="L22"><span class="lineNum">      22</span>              :         virtual BaseClassifier&amp; fit(torch::Tensor&amp; dataset, const std::vector&lt;std::string&gt;&amp; features, const std::string&amp; className, std::map&lt;std::string, std::vector&lt;int&gt;&gt;&amp; states, const torch::Tensor&amp; weights, const Smoothing_t smoothing) = 0;</span>
-<span id="L23"><span class="lineNum">      23</span> <span class="tlaGNC tlaBgGNC">        1380 :         virtual ~BaseClassifier() = default;</span></span>
+<span id="L17"><span class="lineNum">      17</span> <span class="tlaGNC tlaBgGNC">        3993 :         virtual ~BaseClassifier() = default;</span></span>
+<span id="L18"><span class="lineNum">      18</span>              :         // X is nxm std::vector, y is nx1 std::vector</span>
+<span id="L19"><span class="lineNum">      19</span>              :         virtual BaseClassifier&amp; fit(std::vector&lt;std::vector&lt;int&gt;&gt;&amp; X, std::vector&lt;int&gt;&amp; y, const std::vector&lt;std::string&gt;&amp; features, const std::string&amp; className, std::map&lt;std::string, std::vector&lt;int&gt;&gt;&amp; states, const Smoothing_t smoothing) = 0;</span>
+<span id="L20"><span class="lineNum">      20</span>              :         // X is nxm tensor, y is nx1 tensor</span>
+<span id="L21"><span class="lineNum">      21</span>              :         virtual BaseClassifier&amp; fit(torch::Tensor&amp; X, torch::Tensor&amp; y, const std::vector&lt;std::string&gt;&amp; features, const std::string&amp; className, std::map&lt;std::string, std::vector&lt;int&gt;&gt;&amp; states, const Smoothing_t smoothing) = 0;</span>
+<span id="L22"><span class="lineNum">      22</span>              :         virtual BaseClassifier&amp; fit(torch::Tensor&amp; dataset, const std::vector&lt;std::string&gt;&amp; features, const std::string&amp; className, std::map&lt;std::string, std::vector&lt;int&gt;&gt;&amp; states, const Smoothing_t smoothing) = 0;</span>
+<span id="L23"><span class="lineNum">      23</span>              :         virtual BaseClassifier&amp; fit(torch::Tensor&amp; dataset, const std::vector&lt;std::string&gt;&amp; features, const std::string&amp; className, std::map&lt;std::string, std::vector&lt;int&gt;&gt;&amp; states, const torch::Tensor&amp; weights, const Smoothing_t smoothing) = 0;</span>
 <span id="L24"><span class="lineNum">      24</span>              :         torch::Tensor virtual predict(torch::Tensor&amp; X) = 0;</span>
 <span id="L25"><span class="lineNum">      25</span>              :         std::vector&lt;int&gt; virtual predict(std::vector&lt;std::vector&lt;int &gt;&gt;&amp; X) = 0;</span>
 <span id="L26"><span class="lineNum">      26</span>              :         torch::Tensor virtual predict_proba(torch::Tensor&amp; X) = 0;</span>
@@ -98,8 +98,8 @@
 <span id="L28"><span class="lineNum">      28</span>              :         status_t virtual getStatus() const = 0;</span>
 <span id="L29"><span class="lineNum">      29</span>              :         float virtual score(std::vector&lt;std::vector&lt;int&gt;&gt;&amp; X, std::vector&lt;int&gt;&amp; y) = 0;</span>
 <span id="L30"><span class="lineNum">      30</span>              :         float virtual score(torch::Tensor&amp; X, torch::Tensor&amp; y) = 0;</span>
-<span id="L31"><span class="lineNum">      31</span>              :         int virtual getNumberOfNodes()const = 0;</span>
-<span id="L32"><span class="lineNum">      32</span>              :         int virtual getNumberOfEdges()const = 0;</span>
+<span id="L31"><span class="lineNum">      31</span>              :         int virtual getNumberOfNodes() const = 0;</span>
+<span id="L32"><span class="lineNum">      32</span>              :         int virtual getNumberOfEdges() const = 0;</span>
 <span id="L33"><span class="lineNum">      33</span>              :         int virtual getNumberOfStates() const = 0;</span>
 <span id="L34"><span class="lineNum">      34</span>              :         int virtual getClassNumStates() const = 0;</span>
 <span id="L35"><span class="lineNum">      35</span>              :         std::vector&lt;std::string&gt; virtual show() const = 0;</span>
@@ -107,14 +107,16 @@
 <span id="L37"><span class="lineNum">      37</span>              :         virtual std::string getVersion() = 0;</span>
 <span id="L38"><span class="lineNum">      38</span>              :         std::vector&lt;std::string&gt; virtual topological_order() = 0;</span>
 <span id="L39"><span class="lineNum">      39</span>              :         std::vector&lt;std::string&gt; virtual getNotes() const = 0;</span>
-<span id="L40"><span class="lineNum">      40</span>              :         std::string virtual dump_cpt()const = 0;</span>
+<span id="L40"><span class="lineNum">      40</span>              :         std::string virtual dump_cpt() const = 0;</span>
 <span id="L41"><span class="lineNum">      41</span>              :         virtual void setHyperparameters(const nlohmann::json&amp; hyperparameters) = 0;</span>
 <span id="L42"><span class="lineNum">      42</span>              :         std::vector&lt;std::string&gt;&amp; getValidHyperparameters() { return validHyperparameters; }</span>
 <span id="L43"><span class="lineNum">      43</span>              :     protected:</span>
 <span id="L44"><span class="lineNum">      44</span>              :         virtual void trainModel(const torch::Tensor&amp; weights, const Smoothing_t smoothing) = 0;</span>
 <span id="L45"><span class="lineNum">      45</span>              :         std::vector&lt;std::string&gt; validHyperparameters;</span>
-<span id="L46"><span class="lineNum">      46</span>              :     };</span>
-<span id="L47"><span class="lineNum">      47</span>              : }</span>
+<span id="L46"><span class="lineNum">      46</span>              :         std::vector&lt;std::string&gt; notes; // Used to store messages occurred during the fit process</span>
+<span id="L47"><span class="lineNum">      47</span>              :         status_t status = NORMAL;</span>
+<span id="L48"><span class="lineNum">      48</span>              :     };</span>
+<span id="L49"><span class="lineNum">      49</span>              : }</span>
         </pre>
               </td>
             </tr>

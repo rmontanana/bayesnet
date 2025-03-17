@@ -17,5 +17,9 @@ var dir_520a649ed2b1c3b658a695aeefe46a5a =
     [ "TAN.cc", "TAN_8cc_source.html", null ],
     [ "TAN.h", "TAN_8h_source.html", null ],
     [ "TANLd.cc", "TANLd_8cc_source.html", null ],
-    [ "TANLd.h", "TANLd_8h_source.html", null ]
+    [ "TANLd.h", "TANLd_8h_source.html", null ],
+    [ "XSP2DE.cc", "XSP2DE_8cc_source.html", null ],
+    [ "XSP2DE.h", "XSP2DE_8h_source.html", null ],
+    [ "XSPODE.cc", "XSPODE_8cc_source.html", null ],
+    [ "XSPODE.h", "XSPODE_8h_source.html", null ]
 ];

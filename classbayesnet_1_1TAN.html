@@ -28,7 +28,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo_small.png"/></td>
   <td id="projectalign">
-   <div id="projectname">BayesNet<span id="projectnumber">&#160;1.0.6.</span>
+   <div id="projectname">BayesNet<span id="projectnumber">&#160;1.0.7.</span>
    </div>
    <div id="projectbrief">Bayesian Network and basic classifiers Library.</div>
   </td>
@@ -136,6 +136,8 @@ Collaboration diagram for bayesnet::TAN:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a5deccf1042ce653c76b2c15dab81f7b6" id="r_a5deccf1042ce653c76b2c15dab81f7b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5deccf1042ce653c76b2c15dab81f7b6">setHyperparameters</a> (const nlohmann::json &amp;hyperparameters_) override</td></tr>
+<tr class="separator:a5deccf1042ce653c76b2c15dab81f7b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f1dce13241cb61005d1d7fcfaef2cbf" id="r_a8f1dce13241cb61005d1d7fcfaef2cbf"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f1dce13241cb61005d1d7fcfaef2cbf">graph</a> (const std::string &amp;name=&quot;TAN&quot;) const override</td></tr>
 <tr class="separator:a8f1dce13241cb61005d1d7fcfaef2cbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classbayesnet_1_1Classifier"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classbayesnet_1_1Classifier')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classbayesnet_1_1Classifier.html">bayesnet::Classifier</a></td></tr>
@@ -183,8 +185,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad5190e5b210953162d334c71eff43acd inherit pub_methods_classbayesnet_1_1Classifier"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6bb02467321b4e51b066daeeb29a88e8 inherit pub_methods_classbayesnet_1_1Classifier" id="r_a6bb02467321b4e51b066daeeb29a88e8"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbayesnet_1_1Classifier.html#a6bb02467321b4e51b066daeeb29a88e8">dump_cpt</a> () const override</td></tr>
 <tr class="separator:a6bb02467321b4e51b066daeeb29a88e8 inherit pub_methods_classbayesnet_1_1Classifier"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a363db4d3edc674f6c65446f99cb9fa2e inherit pub_methods_classbayesnet_1_1Classifier" id="r_a363db4d3edc674f6c65446f99cb9fa2e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbayesnet_1_1Classifier.html#a363db4d3edc674f6c65446f99cb9fa2e">setHyperparameters</a> (const nlohmann::json &amp;hyperparameters) override</td></tr>
-<tr class="separator:a363db4d3edc674f6c65446f99cb9fa2e inherit pub_methods_classbayesnet_1_1Classifier"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classbayesnet_1_1BaseClassifier"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classbayesnet_1_1BaseClassifier')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classbayesnet_1_1BaseClassifier.html">bayesnet::BaseClassifier</a></td></tr>
 <tr class="memitem:ac4e33e5450cbd7ffe7b8ba5608106722 inherit pub_methods_classbayesnet_1_1BaseClassifier" id="r_ac4e33e5450cbd7ffe7b8ba5608106722"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbayesnet_1_1BaseClassifier.html#ac4e33e5450cbd7ffe7b8ba5608106722">getValidHyperparameters</a> ()</td></tr>
 <tr class="separator:ac4e33e5450cbd7ffe7b8ba5608106722 inherit pub_methods_classbayesnet_1_1BaseClassifier"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -223,13 +223,15 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a725b62e1d3e4a856265613820efff77f inherit pro_attribs_classbayesnet_1_1Classifier"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d9c9d1bd115ead98bb0ddaf2df5d9a6 inherit pro_attribs_classbayesnet_1_1Classifier" id="r_a5d9c9d1bd115ead98bb0ddaf2df5d9a6"><td class="memItemLeft" align="right" valign="top">torch::Tensor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbayesnet_1_1Classifier.html#a5d9c9d1bd115ead98bb0ddaf2df5d9a6">dataset</a></td></tr>
 <tr class="separator:a5d9c9d1bd115ead98bb0ddaf2df5d9a6 inherit pro_attribs_classbayesnet_1_1Classifier"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1fdceba49bf2398b6a4959ddadea177b inherit pro_attribs_classbayesnet_1_1Classifier" id="r_a1fdceba49bf2398b6a4959ddadea177b"><td class="memItemLeft" align="right" valign="top">status_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbayesnet_1_1Classifier.html#a1fdceba49bf2398b6a4959ddadea177b">status</a> = NORMAL</td></tr>
-<tr class="separator:a1fdceba49bf2398b6a4959ddadea177b inherit pro_attribs_classbayesnet_1_1Classifier"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ae8101963f78aefb61093ae66ba1c7d inherit pro_attribs_classbayesnet_1_1Classifier" id="r_a8ae8101963f78aefb61093ae66ba1c7d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbayesnet_1_1Classifier.html#a8ae8101963f78aefb61093ae66ba1c7d">notes</a></td></tr>
-<tr class="separator:a8ae8101963f78aefb61093ae66ba1c7d inherit pro_attribs_classbayesnet_1_1Classifier"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b96721234f28b69bc2fa9566bc8d4e0 inherit pro_attribs_classbayesnet_1_1Classifier" id="r_a7b96721234f28b69bc2fa9566bc8d4e0"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbayesnet_1_1Classifier.html#a7b96721234f28b69bc2fa9566bc8d4e0">CLASSIFIER_NOT_FITTED</a> = &quot;Classifier has not been fitted&quot;</td></tr>
+<tr class="separator:a7b96721234f28b69bc2fa9566bc8d4e0 inherit pro_attribs_classbayesnet_1_1Classifier"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classbayesnet_1_1BaseClassifier"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classbayesnet_1_1BaseClassifier')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classbayesnet_1_1BaseClassifier.html">bayesnet::BaseClassifier</a></td></tr>
 <tr class="memitem:ae2d94700f470b5f4a623965b1c442c6a inherit pro_attribs_classbayesnet_1_1BaseClassifier" id="r_ae2d94700f470b5f4a623965b1c442c6a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbayesnet_1_1BaseClassifier.html#ae2d94700f470b5f4a623965b1c442c6a">validHyperparameters</a></td></tr>
 <tr class="separator:ae2d94700f470b5f4a623965b1c442c6a inherit pro_attribs_classbayesnet_1_1BaseClassifier"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ae5e5e22b36447f8b758c4a74aa859f inherit pro_attribs_classbayesnet_1_1BaseClassifier" id="r_a5ae5e5e22b36447f8b758c4a74aa859f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbayesnet_1_1BaseClassifier.html#a5ae5e5e22b36447f8b758c4a74aa859f">notes</a></td></tr>
+<tr class="separator:a5ae5e5e22b36447f8b758c4a74aa859f inherit pro_attribs_classbayesnet_1_1BaseClassifier"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaab81a9d62109252bf1a650a857516af inherit pro_attribs_classbayesnet_1_1BaseClassifier" id="r_aaab81a9d62109252bf1a650a857516af"><td class="memItemLeft" align="right" valign="top">status_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbayesnet_1_1BaseClassifier.html#aaab81a9d62109252bf1a650a857516af">status</a> = NORMAL</td></tr>
+<tr class="separator:aaab81a9d62109252bf1a650a857516af inherit pro_attribs_classbayesnet_1_1BaseClassifier"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -280,7 +282,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classbayesnet_1_1Classifier.html">bayesnet::Classifier</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TAN_8cc_source.html#l00012">12</a> of file <a class="el" href="TAN_8cc_source.html">TAN.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TAN_8cc_source.html#l00024">24</a> of file <a class="el" href="TAN_8cc_source.html">TAN.cc</a>.</p>
 
 </div>
 </div>
@@ -309,7 +311,36 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classbayesnet_1_1BaseClassifier.html">bayesnet::BaseClassifier</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TAN_8cc_source.html#l00041">41</a> of file <a class="el" href="TAN_8cc_source.html">TAN.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TAN_8cc_source.html#l00056">56</a> of file <a class="el" href="TAN_8cc_source.html">TAN.cc</a>.</p>
+
+</div>
+</div>
+<a id="a5deccf1042ce653c76b2c15dab81f7b6" name="a5deccf1042ce653c76b2c15dab81f7b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5deccf1042ce653c76b2c15dab81f7b6">&#9670;&#160;</a></span>setHyperparameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bayesnet::TAN::setHyperparameters </td>
+          <td>(</td>
+          <td class="paramtype">const nlohmann::json &amp;</td>          <td class="paramname"><span class="paramname"><em>hyperparameters_</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classbayesnet_1_1Classifier.html">bayesnet::Classifier</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="TAN_8cc_source.html#l00015">15</a> of file <a class="el" href="TAN_8cc_source.html">TAN.cc</a>.</p>
 
 </div>
 </div>

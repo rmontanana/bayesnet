@@ -28,7 +28,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo_small.png"/></td>
   <td id="projectalign">
-   <div id="projectname">BayesNet<span id="projectnumber">&#160;1.0.6.</span>
+   <div id="projectname">BayesNet<span id="projectnumber">&#160;1.0.7.</span>
    </div>
    <div id="projectbrief">Bayesian Network and basic classifiers Library.</div>
   </td>
@@ -124,10 +124,14 @@ Inheritance diagram for bayesnet::Ensemble:</div>
 <area shape="poly" title=" " alt="" coords="279,118,279,150,274,150,274,118"/>
 <area shape="rect" href="classbayesnet_1_1BaseClassifier.html" title=" " alt="" coords="193,5,360,30"/>
 <area shape="poly" title=" " alt="" coords="279,46,279,78,274,78,274,46"/>
-<area shape="rect" href="classbayesnet_1_1BoostA2DE.html" title=" " alt="" coords="336,296,486,321"/>
-<area shape="poly" title=" " alt="" coords="474,260,427,298,424,294,471,256"/>
-<area shape="rect" href="classbayesnet_1_1BoostAODE.html" title=" " alt="" coords="510,296,661,321"/>
-<area shape="poly" title=" " alt="" coords="527,256,573,294,570,298,523,260"/>
+<area shape="rect" href="classbayesnet_1_1BoostA2DE.html" title=" " alt="" coords="166,296,315,321"/>
+<area shape="poly" title=" " alt="" coords="443,255,284,298,282,293,441,250"/>
+<area shape="rect" href="classbayesnet_1_1BoostAODE.html" title=" " alt="" coords="339,296,491,321"/>
+<area shape="poly" title=" " alt="" coords="475,260,430,298,427,294,472,256"/>
+<area shape="rect" href="classbayesnet_1_1XBA2DE.html" title=" " alt="" coords="515,296,648,321"/>
+<area shape="poly" title=" " alt="" coords="526,256,570,294,567,298,523,261"/>
+<area shape="rect" href="classbayesnet_1_1XBAODE.html" title=" " alt="" coords="673,296,808,321"/>
+<area shape="poly" title=" " alt="" coords="554,250,701,293,700,298,553,255"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -204,6 +208,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:a345abe00b57fc31a53b605f841c14460" id="r_a345abe00b57fc31a53b605f841c14460"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a345abe00b57fc31a53b605f841c14460">trainModel</a> (const torch::Tensor &amp;weights, const Smoothing_t smoothing) override</td></tr>
+<tr class="separator:a345abe00b57fc31a53b605f841c14460"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77fbc0a1720fbca2210ec34d6de1e293" id="r_a77fbc0a1720fbca2210ec34d6de1e293"><td class="memItemLeft" align="right" valign="top">torch::Tensor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77fbc0a1720fbca2210ec34d6de1e293">predict_average_voting</a> (torch::Tensor &amp;X)</td></tr>
 <tr class="separator:a77fbc0a1720fbca2210ec34d6de1e293"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b21eabaff70af01d9f2794f4aa3f5bd" id="r_a8b21eabaff70af01d9f2794f4aa3f5bd"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b21eabaff70af01d9f2794f4aa3f5bd">predict_average_voting</a> (std::vector&lt; std::vector&lt; int &gt; &gt; &amp;X)</td></tr>
@@ -218,8 +224,6 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:afce60aba82b7f026e8a88ee0ef9cdabd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47a49609634a7a127b3a1264ed55ec04" id="r_a47a49609634a7a127b3a1264ed55ec04"><td class="memItemLeft" align="right" valign="top">torch::Tensor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a47a49609634a7a127b3a1264ed55ec04">voting</a> (torch::Tensor &amp;votes)</td></tr>
 <tr class="separator:a47a49609634a7a127b3a1264ed55ec04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a345abe00b57fc31a53b605f841c14460" id="r_a345abe00b57fc31a53b605f841c14460"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a345abe00b57fc31a53b605f841c14460">trainModel</a> (const torch::Tensor &amp;weights, const Smoothing_t smoothing) override</td></tr>
-<tr class="separator:a345abe00b57fc31a53b605f841c14460"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classbayesnet_1_1Classifier"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classbayesnet_1_1Classifier')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classbayesnet_1_1Classifier.html">bayesnet::Classifier</a></td></tr>
 <tr class="memitem:a11d1d74615d8c844210dd0f9af7bba1c inherit pro_methods_classbayesnet_1_1Classifier" id="r_a11d1d74615d8c844210dd0f9af7bba1c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbayesnet_1_1Classifier.html#a11d1d74615d8c844210dd0f9af7bba1c">checkFitParameters</a> ()</td></tr>
 <tr class="separator:a11d1d74615d8c844210dd0f9af7bba1c inherit pro_methods_classbayesnet_1_1Classifier"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -259,13 +263,15 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a725b62e1d3e4a856265613820efff77f inherit pro_attribs_classbayesnet_1_1Classifier"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d9c9d1bd115ead98bb0ddaf2df5d9a6 inherit pro_attribs_classbayesnet_1_1Classifier" id="r_a5d9c9d1bd115ead98bb0ddaf2df5d9a6"><td class="memItemLeft" align="right" valign="top">torch::Tensor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbayesnet_1_1Classifier.html#a5d9c9d1bd115ead98bb0ddaf2df5d9a6">dataset</a></td></tr>
 <tr class="separator:a5d9c9d1bd115ead98bb0ddaf2df5d9a6 inherit pro_attribs_classbayesnet_1_1Classifier"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1fdceba49bf2398b6a4959ddadea177b inherit pro_attribs_classbayesnet_1_1Classifier" id="r_a1fdceba49bf2398b6a4959ddadea177b"><td class="memItemLeft" align="right" valign="top">status_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbayesnet_1_1Classifier.html#a1fdceba49bf2398b6a4959ddadea177b">status</a> = NORMAL</td></tr>
-<tr class="separator:a1fdceba49bf2398b6a4959ddadea177b inherit pro_attribs_classbayesnet_1_1Classifier"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ae8101963f78aefb61093ae66ba1c7d inherit pro_attribs_classbayesnet_1_1Classifier" id="r_a8ae8101963f78aefb61093ae66ba1c7d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbayesnet_1_1Classifier.html#a8ae8101963f78aefb61093ae66ba1c7d">notes</a></td></tr>
-<tr class="separator:a8ae8101963f78aefb61093ae66ba1c7d inherit pro_attribs_classbayesnet_1_1Classifier"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b96721234f28b69bc2fa9566bc8d4e0 inherit pro_attribs_classbayesnet_1_1Classifier" id="r_a7b96721234f28b69bc2fa9566bc8d4e0"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbayesnet_1_1Classifier.html#a7b96721234f28b69bc2fa9566bc8d4e0">CLASSIFIER_NOT_FITTED</a> = &quot;Classifier has not been fitted&quot;</td></tr>
+<tr class="separator:a7b96721234f28b69bc2fa9566bc8d4e0 inherit pro_attribs_classbayesnet_1_1Classifier"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classbayesnet_1_1BaseClassifier"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classbayesnet_1_1BaseClassifier')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classbayesnet_1_1BaseClassifier.html">bayesnet::BaseClassifier</a></td></tr>
 <tr class="memitem:ae2d94700f470b5f4a623965b1c442c6a inherit pro_attribs_classbayesnet_1_1BaseClassifier" id="r_ae2d94700f470b5f4a623965b1c442c6a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbayesnet_1_1BaseClassifier.html#ae2d94700f470b5f4a623965b1c442c6a">validHyperparameters</a></td></tr>
 <tr class="separator:ae2d94700f470b5f4a623965b1c442c6a inherit pro_attribs_classbayesnet_1_1BaseClassifier"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ae5e5e22b36447f8b758c4a74aa859f inherit pro_attribs_classbayesnet_1_1BaseClassifier" id="r_a5ae5e5e22b36447f8b758c4a74aa859f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbayesnet_1_1BaseClassifier.html#a5ae5e5e22b36447f8b758c4a74aa859f">notes</a></td></tr>
+<tr class="separator:a5ae5e5e22b36447f8b758c4a74aa859f inherit pro_attribs_classbayesnet_1_1BaseClassifier"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaab81a9d62109252bf1a650a857516af inherit pro_attribs_classbayesnet_1_1BaseClassifier" id="r_aaab81a9d62109252bf1a650a857516af"><td class="memItemLeft" align="right" valign="top">status_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbayesnet_1_1BaseClassifier.html#aaab81a9d62109252bf1a650a857516af">status</a> = NORMAL</td></tr>
+<tr class="separator:aaab81a9d62109252bf1a650a857516af inherit pro_attribs_classbayesnet_1_1BaseClassifier"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -286,7 +292,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Ensemble_8cc_source.html#l00011">11</a> of file <a class="el" href="Ensemble_8cc_source.html">Ensemble.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Ensemble_8cc_source.html#l00010">10</a> of file <a class="el" href="Ensemble_8cc_source.html">Ensemble.cc</a>.</p>
 
 </div>
 </div>
@@ -314,7 +320,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Ensemble_8cc_source.html#l00023">23</a> of file <a class="el" href="Ensemble_8cc_source.html">Ensemble.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Ensemble_8cc_source.html#l00022">22</a> of file <a class="el" href="Ensemble_8cc_source.html">Ensemble.cc</a>.</p>
 
 </div>
 </div>
@@ -341,7 +347,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Ensemble_8cc_source.html#l00032">32</a> of file <a class="el" href="Ensemble_8cc_source.html">Ensemble.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Ensemble_8cc_source.html#l00031">31</a> of file <a class="el" href="Ensemble_8cc_source.html">Ensemble.cc</a>.</p>
 
 </div>
 </div>
@@ -515,7 +521,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classbayesnet_1_1Classifier.html">bayesnet::Classifier</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="Ensemble_8cc_source.html#l00073">73</a> of file <a class="el" href="Ensemble_8cc_source.html">Ensemble.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Ensemble_8cc_source.html#l00072">72</a> of file <a class="el" href="Ensemble_8cc_source.html">Ensemble.cc</a>.</p>
 
 </div>
 </div>
@@ -544,7 +550,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classbayesnet_1_1Classifier.html">bayesnet::Classifier</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="Ensemble_8cc_source.html#l00078">78</a> of file <a class="el" href="Ensemble_8cc_source.html">Ensemble.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Ensemble_8cc_source.html#l00077">77</a> of file <a class="el" href="Ensemble_8cc_source.html">Ensemble.cc</a>.</p>
 
 </div>
 </div>
@@ -598,7 +604,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Ensemble_8cc_source.html#l00083">83</a> of file <a class="el" href="Ensemble_8cc_source.html">Ensemble.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Ensemble_8cc_source.html#l00082">82</a> of file <a class="el" href="Ensemble_8cc_source.html">Ensemble.cc</a>.</p>
 
 </div>
 </div>
@@ -681,7 +687,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classbayesnet_1_1Classifier.html">bayesnet::Classifier</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="Ensemble_8cc_source.html#l00059">59</a> of file <a class="el" href="Ensemble_8cc_source.html">Ensemble.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Ensemble_8cc_source.html#l00058">58</a> of file <a class="el" href="Ensemble_8cc_source.html">Ensemble.cc</a>.</p>
 
 </div>
 </div>
@@ -710,7 +716,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classbayesnet_1_1Classifier.html">bayesnet::Classifier</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="Ensemble_8cc_source.html#l00066">66</a> of file <a class="el" href="Ensemble_8cc_source.html">Ensemble.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Ensemble_8cc_source.html#l00065">65</a> of file <a class="el" href="Ensemble_8cc_source.html">Ensemble.cc</a>.</p>
 
 </div>
 </div>
@@ -867,7 +873,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classbayesnet_1_1Classifier.html">bayesnet::Classifier</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="Ensemble_8cc_source.html#l00015">15</a> of file <a class="el" href="Ensemble_8cc_source.html">Ensemble.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Ensemble_8cc_source.html#l00014">14</a> of file <a class="el" href="Ensemble_8cc_source.html">Ensemble.cc</a>.</p>
 
 </div>
 </div>
@@ -894,7 +900,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Ensemble_8cc_source.html#l00037">37</a> of file <a class="el" href="Ensemble_8cc_source.html">Ensemble.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Ensemble_8cc_source.html#l00036">36</a> of file <a class="el" href="Ensemble_8cc_source.html">Ensemble.cc</a>.</p>
 
 </div>
 </div>
@@ -919,7 +925,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Ensemble_8h_source.html#l00047">47</a> of file <a class="el" href="Ensemble_8h_source.html">Ensemble.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Ensemble_8h_source.html#l00054">54</a> of file <a class="el" href="Ensemble_8h_source.html">Ensemble.h</a>.</p>
 
 </div>
 </div>
@@ -943,7 +949,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Ensemble_8h_source.html#l00046">46</a> of file <a class="el" href="Ensemble_8h_source.html">Ensemble.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Ensemble_8h_source.html#l00053">53</a> of file <a class="el" href="Ensemble_8h_source.html">Ensemble.h</a>.</p>
 
 </div>
 </div>
@@ -967,7 +973,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Ensemble_8h_source.html#l00050">50</a> of file <a class="el" href="Ensemble_8h_source.html">Ensemble.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Ensemble_8h_source.html#l00056">56</a> of file <a class="el" href="Ensemble_8h_source.html">Ensemble.h</a>.</p>
 
 </div>
 </div>
@@ -991,7 +997,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Ensemble_8h_source.html#l00048">48</a> of file <a class="el" href="Ensemble_8h_source.html">Ensemble.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Ensemble_8h_source.html#l00055">55</a> of file <a class="el" href="Ensemble_8h_source.html">Ensemble.h</a>.</p>
 
 </div>
 </div>

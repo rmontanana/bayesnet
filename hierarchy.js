@@ -8,7 +8,9 @@ var hierarchy =
           [ "bayesnet::AODELd", "classbayesnet_1_1AODELd.html", null ],
           [ "bayesnet::Boost", "classbayesnet_1_1Boost.html", [
             [ "bayesnet::BoostA2DE", "classbayesnet_1_1BoostA2DE.html", null ],
-            [ "bayesnet::BoostAODE", "classbayesnet_1_1BoostAODE.html", null ]
+            [ "bayesnet::BoostAODE", "classbayesnet_1_1BoostAODE.html", null ],
+            [ "bayesnet::XBA2DE", "classbayesnet_1_1XBA2DE.html", null ],
+            [ "bayesnet::XBAODE", "classbayesnet_1_1XBAODE.html", null ]
           ] ]
         ] ],
         [ "bayesnet::KDB", "classbayesnet_1_1KDB.html", [
@@ -20,7 +22,9 @@ var hierarchy =
         [ "bayesnet::SPnDE", "classbayesnet_1_1SPnDE.html", null ],
         [ "bayesnet::TAN", "classbayesnet_1_1TAN.html", [
           [ "bayesnet::TANLd", "classbayesnet_1_1TANLd.html", null ]
-        ] ]
+        ] ],
+        [ "bayesnet::XSp2de", "classbayesnet_1_1XSp2de.html", null ],
+        [ "bayesnet::XSpode", "classbayesnet_1_1XSpode.html", null ]
       ] ]
     ] ],
     [ "bayesnet::Network", "classbayesnet_1_1Network.html", null ],

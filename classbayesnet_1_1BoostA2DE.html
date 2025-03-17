@@ -28,7 +28,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo_small.png"/></td>
   <td id="projectalign">
-   <div id="projectname">BayesNet<span id="projectnumber">&#160;1.0.6.</span>
+   <div id="projectname">BayesNet<span id="projectnumber">&#160;1.0.7.</span>
    </div>
    <div id="projectbrief">Bayesian Network and basic classifiers Library.</div>
   </td>
@@ -220,7 +220,13 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a79e4c58021af69e26126c8f58d1c3b29 inherit pro_methods_classbayesnet_1_1Boost"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abee86d771210899db79678a2f31823cf inherit pro_methods_classbayesnet_1_1Boost" id="r_abee86d771210899db79678a2f31823cf"><td class="memItemLeft" align="right" valign="top">std::tuple&lt; torch::Tensor &amp;, double, bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbayesnet_1_1Boost.html#abee86d771210899db79678a2f31823cf">update_weights_block</a> (int k, torch::Tensor &amp;ytrain, torch::Tensor &amp;weights)</td></tr>
 <tr class="separator:abee86d771210899db79678a2f31823cf inherit pro_methods_classbayesnet_1_1Boost"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0953d2366eb88f08ccb628e8ff42cf97 inherit pro_methods_classbayesnet_1_1Boost" id="r_a0953d2366eb88f08ccb628e8ff42cf97"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbayesnet_1_1Boost.html#a0953d2366eb88f08ccb628e8ff42cf97">add_model</a> (std::unique_ptr&lt; <a class="el" href="classbayesnet_1_1Classifier.html">Classifier</a> &gt; model, double significance)</td></tr>
+<tr class="separator:a0953d2366eb88f08ccb628e8ff42cf97 inherit pro_methods_classbayesnet_1_1Boost"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c000bef910d522db2c679dca228b141 inherit pro_methods_classbayesnet_1_1Boost" id="r_a3c000bef910d522db2c679dca228b141"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbayesnet_1_1Boost.html#a3c000bef910d522db2c679dca228b141">remove_last_model</a> ()</td></tr>
+<tr class="separator:a3c000bef910d522db2c679dca228b141 inherit pro_methods_classbayesnet_1_1Boost"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classbayesnet_1_1Ensemble"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classbayesnet_1_1Ensemble')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classbayesnet_1_1Ensemble.html">bayesnet::Ensemble</a></td></tr>
+<tr class="memitem:a345abe00b57fc31a53b605f841c14460 inherit pro_methods_classbayesnet_1_1Ensemble" id="r_a345abe00b57fc31a53b605f841c14460"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbayesnet_1_1Ensemble.html#a345abe00b57fc31a53b605f841c14460">trainModel</a> (const torch::Tensor &amp;weights, const Smoothing_t smoothing) override</td></tr>
+<tr class="separator:a345abe00b57fc31a53b605f841c14460 inherit pro_methods_classbayesnet_1_1Ensemble"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77fbc0a1720fbca2210ec34d6de1e293 inherit pro_methods_classbayesnet_1_1Ensemble" id="r_a77fbc0a1720fbca2210ec34d6de1e293"><td class="memItemLeft" align="right" valign="top">torch::Tensor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbayesnet_1_1Ensemble.html#a77fbc0a1720fbca2210ec34d6de1e293">predict_average_voting</a> (torch::Tensor &amp;X)</td></tr>
 <tr class="separator:a77fbc0a1720fbca2210ec34d6de1e293 inherit pro_methods_classbayesnet_1_1Ensemble"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b21eabaff70af01d9f2794f4aa3f5bd inherit pro_methods_classbayesnet_1_1Ensemble" id="r_a8b21eabaff70af01d9f2794f4aa3f5bd"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbayesnet_1_1Ensemble.html#a8b21eabaff70af01d9f2794f4aa3f5bd">predict_average_voting</a> (std::vector&lt; std::vector&lt; int &gt; &gt; &amp;X)</td></tr>
@@ -235,8 +241,6 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:afce60aba82b7f026e8a88ee0ef9cdabd inherit pro_methods_classbayesnet_1_1Ensemble"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47a49609634a7a127b3a1264ed55ec04 inherit pro_methods_classbayesnet_1_1Ensemble" id="r_a47a49609634a7a127b3a1264ed55ec04"><td class="memItemLeft" align="right" valign="top">torch::Tensor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbayesnet_1_1Ensemble.html#a47a49609634a7a127b3a1264ed55ec04">voting</a> (torch::Tensor &amp;votes)</td></tr>
 <tr class="separator:a47a49609634a7a127b3a1264ed55ec04 inherit pro_methods_classbayesnet_1_1Ensemble"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a345abe00b57fc31a53b605f841c14460 inherit pro_methods_classbayesnet_1_1Ensemble" id="r_a345abe00b57fc31a53b605f841c14460"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbayesnet_1_1Ensemble.html#a345abe00b57fc31a53b605f841c14460">trainModel</a> (const torch::Tensor &amp;weights, const Smoothing_t smoothing) override</td></tr>
-<tr class="separator:a345abe00b57fc31a53b605f841c14460 inherit pro_methods_classbayesnet_1_1Ensemble"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classbayesnet_1_1Classifier"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classbayesnet_1_1Classifier')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classbayesnet_1_1Classifier.html">bayesnet::Classifier</a></td></tr>
 <tr class="memitem:a11d1d74615d8c844210dd0f9af7bba1c inherit pro_methods_classbayesnet_1_1Classifier" id="r_a11d1d74615d8c844210dd0f9af7bba1c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbayesnet_1_1Classifier.html#a11d1d74615d8c844210dd0f9af7bba1c">checkFitParameters</a> ()</td></tr>
 <tr class="separator:a11d1d74615d8c844210dd0f9af7bba1c inherit pro_methods_classbayesnet_1_1Classifier"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -259,7 +263,7 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:ac8a53b6bdb07aa4f8bfe43515da8228f inherit pro_attribs_classbayesnet_1_1Boost"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ed44d620c1f2e5c06c3695585e40860 inherit pro_attribs_classbayesnet_1_1Boost" id="r_a9ed44d620c1f2e5c06c3695585e40860"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbayesnet_1_1Boost.html#a9ed44d620c1f2e5c06c3695585e40860">maxTolerance</a> = 3</td></tr>
 <tr class="separator:a9ed44d620c1f2e5c06c3695585e40860 inherit pro_attribs_classbayesnet_1_1Boost"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b4a91f940ebcfd532c73df0018acb3e inherit pro_attribs_classbayesnet_1_1Boost" id="r_a5b4a91f940ebcfd532c73df0018acb3e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbayesnet_1_1Boost.html#a5b4a91f940ebcfd532c73df0018acb3e">order_algorithm</a></td></tr>
+<tr class="memitem:a5b4a91f940ebcfd532c73df0018acb3e inherit pro_attribs_classbayesnet_1_1Boost" id="r_a5b4a91f940ebcfd532c73df0018acb3e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbayesnet_1_1Boost.html#a5b4a91f940ebcfd532c73df0018acb3e">order_algorithm</a> = Orders.DESC</td></tr>
 <tr class="separator:a5b4a91f940ebcfd532c73df0018acb3e inherit pro_attribs_classbayesnet_1_1Boost"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71e17067522a19e6d23ab503aa7cc16a inherit pro_attribs_classbayesnet_1_1Boost" id="r_a71e17067522a19e6d23ab503aa7cc16a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbayesnet_1_1Boost.html#a71e17067522a19e6d23ab503aa7cc16a">convergence</a> = true</td></tr>
 <tr class="separator:a71e17067522a19e6d23ab503aa7cc16a inherit pro_attribs_classbayesnet_1_1Boost"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -267,7 +271,7 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a985df40f71dd9a64d0fc9e66ed41595b inherit pro_attribs_classbayesnet_1_1Boost"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57bf7c3a220afd538287f88be41f463e inherit pro_attribs_classbayesnet_1_1Boost" id="r_a57bf7c3a220afd538287f88be41f463e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbayesnet_1_1Boost.html#a57bf7c3a220afd538287f88be41f463e">selectFeatures</a> = false</td></tr>
 <tr class="separator:a57bf7c3a220afd538287f88be41f463e inherit pro_attribs_classbayesnet_1_1Boost"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1dd29281582d7815c7b3302d61492bde inherit pro_attribs_classbayesnet_1_1Boost" id="r_a1dd29281582d7815c7b3302d61492bde"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbayesnet_1_1Boost.html#a1dd29281582d7815c7b3302d61492bde">select_features_algorithm</a> = Orders.DESC</td></tr>
+<tr class="memitem:a1dd29281582d7815c7b3302d61492bde inherit pro_attribs_classbayesnet_1_1Boost" id="r_a1dd29281582d7815c7b3302d61492bde"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbayesnet_1_1Boost.html#a1dd29281582d7815c7b3302d61492bde">select_features_algorithm</a></td></tr>
 <tr class="separator:a1dd29281582d7815c7b3302d61492bde inherit pro_attribs_classbayesnet_1_1Boost"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb59196a4e112d4c1921d78766d7b966 inherit pro_attribs_classbayesnet_1_1Boost" id="r_adb59196a4e112d4c1921d78766d7b966"><td class="memItemLeft" align="right" valign="top">FeatureSelect *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbayesnet_1_1Boost.html#adb59196a4e112d4c1921d78766d7b966">featureSelector</a> = nullptr</td></tr>
 <tr class="separator:adb59196a4e112d4c1921d78766d7b966 inherit pro_attribs_classbayesnet_1_1Boost"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -275,6 +279,8 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a1cbc839445860d3e4c8f5a11359c58c3 inherit pro_attribs_classbayesnet_1_1Boost"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b290f030febf39c41ff679990d9cf4c inherit pro_attribs_classbayesnet_1_1Boost" id="r_a4b290f030febf39c41ff679990d9cf4c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbayesnet_1_1Boost.html#a4b290f030febf39c41ff679990d9cf4c">block_update</a> = false</td></tr>
 <tr class="separator:a4b290f030febf39c41ff679990d9cf4c inherit pro_attribs_classbayesnet_1_1Boost"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae305ed24271b0372ba33c07d338b6ddf inherit pro_attribs_classbayesnet_1_1Boost" id="r_ae305ed24271b0372ba33c07d338b6ddf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbayesnet_1_1Boost.html#ae305ed24271b0372ba33c07d338b6ddf">alpha_block</a> = false</td></tr>
+<tr class="separator:ae305ed24271b0372ba33c07d338b6ddf inherit pro_attribs_classbayesnet_1_1Boost"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classbayesnet_1_1Ensemble"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classbayesnet_1_1Ensemble')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classbayesnet_1_1Ensemble.html">bayesnet::Ensemble</a></td></tr>
 <tr class="memitem:a65b82f7036d283358a756013f96bec8d inherit pro_attribs_classbayesnet_1_1Ensemble" id="r_a65b82f7036d283358a756013f96bec8d"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbayesnet_1_1Ensemble.html#a65b82f7036d283358a756013f96bec8d">n_models</a></td></tr>
 <tr class="separator:a65b82f7036d283358a756013f96bec8d inherit pro_attribs_classbayesnet_1_1Ensemble"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -303,13 +309,15 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a725b62e1d3e4a856265613820efff77f inherit pro_attribs_classbayesnet_1_1Classifier"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d9c9d1bd115ead98bb0ddaf2df5d9a6 inherit pro_attribs_classbayesnet_1_1Classifier" id="r_a5d9c9d1bd115ead98bb0ddaf2df5d9a6"><td class="memItemLeft" align="right" valign="top">torch::Tensor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbayesnet_1_1Classifier.html#a5d9c9d1bd115ead98bb0ddaf2df5d9a6">dataset</a></td></tr>
 <tr class="separator:a5d9c9d1bd115ead98bb0ddaf2df5d9a6 inherit pro_attribs_classbayesnet_1_1Classifier"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1fdceba49bf2398b6a4959ddadea177b inherit pro_attribs_classbayesnet_1_1Classifier" id="r_a1fdceba49bf2398b6a4959ddadea177b"><td class="memItemLeft" align="right" valign="top">status_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbayesnet_1_1Classifier.html#a1fdceba49bf2398b6a4959ddadea177b">status</a> = NORMAL</td></tr>
-<tr class="separator:a1fdceba49bf2398b6a4959ddadea177b inherit pro_attribs_classbayesnet_1_1Classifier"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ae8101963f78aefb61093ae66ba1c7d inherit pro_attribs_classbayesnet_1_1Classifier" id="r_a8ae8101963f78aefb61093ae66ba1c7d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbayesnet_1_1Classifier.html#a8ae8101963f78aefb61093ae66ba1c7d">notes</a></td></tr>
-<tr class="separator:a8ae8101963f78aefb61093ae66ba1c7d inherit pro_attribs_classbayesnet_1_1Classifier"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b96721234f28b69bc2fa9566bc8d4e0 inherit pro_attribs_classbayesnet_1_1Classifier" id="r_a7b96721234f28b69bc2fa9566bc8d4e0"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbayesnet_1_1Classifier.html#a7b96721234f28b69bc2fa9566bc8d4e0">CLASSIFIER_NOT_FITTED</a> = &quot;Classifier has not been fitted&quot;</td></tr>
+<tr class="separator:a7b96721234f28b69bc2fa9566bc8d4e0 inherit pro_attribs_classbayesnet_1_1Classifier"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classbayesnet_1_1BaseClassifier"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classbayesnet_1_1BaseClassifier')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classbayesnet_1_1BaseClassifier.html">bayesnet::BaseClassifier</a></td></tr>
 <tr class="memitem:ae2d94700f470b5f4a623965b1c442c6a inherit pro_attribs_classbayesnet_1_1BaseClassifier" id="r_ae2d94700f470b5f4a623965b1c442c6a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbayesnet_1_1BaseClassifier.html#ae2d94700f470b5f4a623965b1c442c6a">validHyperparameters</a></td></tr>
 <tr class="separator:ae2d94700f470b5f4a623965b1c442c6a inherit pro_attribs_classbayesnet_1_1BaseClassifier"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ae5e5e22b36447f8b758c4a74aa859f inherit pro_attribs_classbayesnet_1_1BaseClassifier" id="r_a5ae5e5e22b36447f8b758c4a74aa859f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbayesnet_1_1BaseClassifier.html#a5ae5e5e22b36447f8b758c4a74aa859f">notes</a></td></tr>
+<tr class="separator:a5ae5e5e22b36447f8b758c4a74aa859f inherit pro_attribs_classbayesnet_1_1BaseClassifier"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaab81a9d62109252bf1a650a857516af inherit pro_attribs_classbayesnet_1_1BaseClassifier" id="r_aaab81a9d62109252bf1a650a857516af"><td class="memItemLeft" align="right" valign="top">status_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbayesnet_1_1BaseClassifier.html#aaab81a9d62109252bf1a650a857516af">status</a> = NORMAL</td></tr>
+<tr class="separator:aaab81a9d62109252bf1a650a857516af inherit pro_attribs_classbayesnet_1_1BaseClassifier"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -338,7 +346,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BoostA2DE_8cc_source.html#l00019">19</a> of file <a class="el" href="BoostA2DE_8cc_source.html">BoostA2DE.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BoostA2DE_8cc_source.html#l00014">14</a> of file <a class="el" href="BoostA2DE_8cc_source.html">BoostA2DE.cc</a>.</p>
 
 </div>
 </div>
@@ -368,7 +376,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classbayesnet_1_1BaseClassifier.html">bayesnet::BaseClassifier</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="BoostA2DE_8cc_source.html#l00166">166</a> of file <a class="el" href="BoostA2DE_8cc_source.html">BoostA2DE.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BoostA2DE_8cc_source.html#l00161">161</a> of file <a class="el" href="BoostA2DE_8cc_source.html">BoostA2DE.cc</a>.</p>
 
 </div>
 </div>
@@ -401,7 +409,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classbayesnet_1_1BaseClassifier.html">bayesnet::BaseClassifier</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="BoostA2DE_8cc_source.html#l00044">44</a> of file <a class="el" href="BoostA2DE_8cc_source.html">BoostA2DE.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BoostA2DE_8cc_source.html#l00039">39</a> of file <a class="el" href="BoostA2DE_8cc_source.html">BoostA2DE.cc</a>.</p>
 
 </div>
 </div>
